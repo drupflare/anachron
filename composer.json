@@ -1,0 +1,78 @@
+{
+	"name": "drupflare/anachron",
+	"description": "Runs legacy Drupal code on a current Drupal core: removed-function polyfills, hook and route bridges, and a staged path to native code.",
+	"type": "library",
+	"license": "MIT",
+	"keywords": [
+		"drupal",
+		"legacy",
+		"compatibility",
+		"polyfill",
+		"migration",
+		"cloudflare",
+		"workers"
+	],
+	"homepage": "https://github.com/drupflare/anachron",
+	"authors": [
+		{
+			"name": "Gregory Mitchell",
+			"email": "me@gmitch215.xyz",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/drupflare/anachron/issues",
+		"source": "https://github.com/drupflare/anachron"
+	},
+	"require": {
+		"php": "^8.3",
+		"ext-json": "*",
+		"ext-tokenizer": "*",
+		"drupal/core": "^11.3"
+	},
+	"require-dev": {
+		"drupal/coder": "^9.0",
+		"nikic/php-parser": "^5.9",
+		"phpstan/phpstan": "^2.2",
+		"phpunit/phpunit": "^11.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"Drupflare\\Anachron\\": "src/"
+		},
+		"files": [
+			"src/Php/polyfills.php"
+		]
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Drupflare\\Anachron\\Tests\\": "tests/"
+		}
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://packages.drupal.org/8"
+		}
+	],
+	"config": {
+		"sort-packages": true,
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"symfony/runtime": false,
+			"drupal/core-composer-scaffold": false
+		}
+	},
+	"scripts": {
+		"analyze": "phpstan analyse --memory-limit=1G",
+		"lint": "phpcs",
+		"lint:fix": "phpcbf",
+		"test": "phpunit"
+	},
+	"scripts-descriptions": {
+		"analyze": "Runs PHPStan over src/ at the level pinned in phpstan.neon.",
+		"lint": "Runs phpcs with the ruleset in phpcs.xml.dist.",
+		"lint:fix": "Runs phpcbf over the same ruleset.",
+		"test": "Runs the PHPUnit suites."
+	}
+}

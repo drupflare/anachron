@@ -1,0 +1,8 @@
+parameters:
+    level: 5
+    paths:
+        - src
+    treatPhpDocTypesAsCertain: false
+    scanFiles:
+        - vendor/drupal/core/includes/bootstrap.inc
+        - vendor/drupal/core/includes/common.inc

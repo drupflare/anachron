@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<ruleset name="anachron">
+	<description>Drupal coding standards, with the house layout exclusions.</description>
+
+	<file>src</file>
+	<file>tests</file>
+	<arg name="extensions" value="php,module,install,inc" />
+	<arg value="sp" />
+	<arg name="colors" />
+
+	<rule ref="Drupal">
+		<!--
+			The house rule is: import with `use`, then refer to the short name, everywhere, and
+			the small global classes are not exempt. This sniff asserts the opposite.
+		-->
+		<exclude name="Drupal.Classes.UseGlobalClass.RedundantUseStatement" />
+		<!--
+			The project comment style for `//` comments is lowercase with no trailing period.
+			Every Drupal.Commenting.DocComment.* sniff stays enabled: a docblock is real
+			documentation and Drupal's capital-and-full-stop rule is correct there.
+		-->
+		<exclude name="Drupal.Commenting.InlineComment.NotCapital" />
+		<exclude name="Drupal.Commenting.InlineComment.InvalidEndChar" />
+		<exclude name="Drupal.Functions.DiscouragedFunctions.Discouraged" />
+	</rule>
+
+	<rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">
+		<properties>
+			<property name="searchAnnotations" value="true" />
+		</properties>
+	</rule>
+
+	<rule ref="DrupalPractice">
+		<exclude name="DrupalPractice.Commenting.CommentEmptyLine.SpacingAfter" />
+	</rule>
+
+	<!--
+		Drupal's default line limit is 80. The repository formats everything else at printWidth
+		100 (.prettierrc), and two limits in one repository is incoherent.
+	-->
+	<rule ref="Drupal.Files.LineLength">
+		<properties>
+			<property name="lineLimit" value="110" />
+		</properties>
+	</rule>
+
+	<!--
+		Layout is not phpcs's job here. The house style is tabs rendered 4 wide at a 100-character
+		line (.editorconfig, .prettierrc) and @prettier/plugin-php enforces it. The Drupal standard
+		hard-codes two spaces and its own brace placement, so the two cannot both be right and
+		phpcs loses that argument. Every entry below is whitespace, brace position or casing.
+		phpcs keeps docs, naming, arrays, line length and every Drupal and DrupalPractice
+		API-misuse check. Lowercase true, false and null match mantle2, the production Drupal
+		module in this workspace.
+	-->
+	<rule ref="Drupal">
+		<exclude name="Generic.PHP.UpperCaseConstant.Found" />
+		<exclude name="Generic.WhiteSpace.DisallowTabIndent" />
+		<exclude name="Generic.CodeAnalysis.UselessOverridingMethod.Found" />
+		<exclude name="Drupal.WhiteSpace.ScopeIndent" />
+		<exclude name="Drupal.WhiteSpace.ObjectOperatorIndent" />
+		<exclude name="Drupal.WhiteSpace.ScopeClosingBrace" />
+		<exclude name="Drupal.Arrays.Array.ArrayIndentation" />
+		<exclude name="Drupal.Classes.ClassDeclaration.BraceOnNewLine" />
+		<exclude name="Drupal.Classes.ClassDeclaration.CloseBraceAfterBody" />
+		<exclude name="Drupal.Functions.MultiLineFunctionDeclaration.BraceOnNewLine" />
+		<exclude name="Drupal.Functions.MultiLineFunctionDeclaration.Indent" />
+		<exclude name="Drupal.ControlStructures.ControlSignature.NewlineAfterCloseBrace" />
+		<exclude name="Drupal.Commenting.InlineComment.SpacingAfter" />
+		<exclude name="Squiz.ControlStructures.ForEachLoopDeclaration.SpacingBeforeAs" />
+		<exclude name="Squiz.WhiteSpace.FunctionSpacing.AfterLast" />
+		<exclude name="Squiz.WhiteSpace.FunctionSpacing.BeforeFirst" />
+	</rule>
+
+	<!--
+		src/Php/polyfills.php defines removed PHP functions under their original global names,
+		which are snake_case and unprefixed by design: legacy callers use exactly these names.
+	-->
+	<rule ref="Drupal.NamingConventions.ValidFunctionName">
+		<exclude-pattern>src/Php/polyfills.php</exclude-pattern>
+	</rule>
+
+	<rule ref="Drupal.Commenting.FunctionComment.Missing">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Drupal.Commenting.ClassComment.Missing">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Drupal.Commenting.VariableComment.Missing">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Drupal.Classes.FullyQualifiedNamespace.UseStatementMissing">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Classes.ClassFileName.NoMatch">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+</ruleset>
