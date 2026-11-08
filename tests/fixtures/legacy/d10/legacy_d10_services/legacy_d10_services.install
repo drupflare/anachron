@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Install functions for the Legacy D10 services module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function legacy_d10_services_schema() {
+  $schema['legacy_d10_services_log'] = [
+    'description' => 'Messages written by the legacy service.',
+    'fields' => [
+      'id' => ['type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE],
+      'message' => ['type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => ''],
+    ],
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}

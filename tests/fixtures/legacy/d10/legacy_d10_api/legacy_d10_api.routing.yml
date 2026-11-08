@@ -1,0 +1,41 @@
+legacy_d10_api.format_size:
+  path: '/legacy-d10/format-size'
+  defaults:
+    _controller: '\Drupal\legacy_d10_api\Controller\LegacyApiController::formatSize'
+  requirements:
+    _access: 'TRUE'
+
+legacy_d10_api.watchdog:
+  path: '/legacy-d10/watchdog'
+  defaults:
+    _controller: '\Drupal\legacy_d10_api\Controller\LegacyApiController::watchdog'
+  requirements:
+    _access: 'TRUE'
+
+legacy_d10_api.module_load_include:
+  path: '/legacy-d10/module-load-include'
+  defaults:
+    _controller: '\Drupal\legacy_d10_api\Controller\LegacyApiController::moduleLoadInclude'
+  requirements:
+    _access: 'TRUE'
+
+legacy_d10_api.user_role_names:
+  path: '/legacy-d10/user-role-names'
+  defaults:
+    _controller: '\Drupal\legacy_d10_api\Controller\LegacyApiController::userRoleNames'
+  requirements:
+    _access: 'TRUE'
+
+legacy_d10_api.theme_get_registry:
+  path: '/legacy-d10/theme-registry'
+  defaults:
+    _controller: '\Drupal\legacy_d10_api\Controller\LegacyApiController::themeRegistry'
+  requirements:
+    _access: 'TRUE'
+
+legacy_d10_api.system_time_zones:
+  path: '/legacy-d10/time-zones'
+  defaults:
+    _controller: '\Drupal\legacy_d10_api\Controller\LegacyApiController::timeZones'
+  requirements:
+    _access: 'TRUE'

@@ -1,0 +1,5 @@
+name: Legacy D8 basic
+type: module
+description: A Drupal 8 module, as it was written against 8.x, before core_version_requirement.
+package: Legacy
+core: 8.x

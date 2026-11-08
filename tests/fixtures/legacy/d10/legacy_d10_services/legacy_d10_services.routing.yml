@@ -1,0 +1,20 @@
+legacy_d10_services.yaml:
+  path: '/legacy-d10/services/yaml'
+  defaults:
+    _controller: '\Drupal\legacy_d10_services\Controller\LegacyServicesController::yaml'
+  requirements:
+    _access: 'TRUE'
+
+legacy_d10_services.password:
+  path: '/legacy-d10/services/password'
+  defaults:
+    _controller: '\Drupal\legacy_d10_services\Controller\LegacyServicesController::password'
+  requirements:
+    _access: 'TRUE'
+
+legacy_d10_services.node_form:
+  path: '/legacy-d10/services/node-form'
+  defaults:
+    _controller: '\Drupal\legacy_d10_services\Controller\LegacyServicesController::nodeForm'
+  requirements:
+    _access: 'TRUE'

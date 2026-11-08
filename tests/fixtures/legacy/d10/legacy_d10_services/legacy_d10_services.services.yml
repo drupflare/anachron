@@ -1,0 +1,3 @@
+services:
+  legacy_d10_services.legacy_calls:
+    class: Drupal\legacy_d10_services\LegacyCalls

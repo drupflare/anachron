@@ -1,0 +1,5 @@
+name: Legacy D10 API
+type: module
+description: A Drupal 10 module that calls procedural helpers removed in Drupal 11.
+package: Legacy
+core_version_requirement: ^10

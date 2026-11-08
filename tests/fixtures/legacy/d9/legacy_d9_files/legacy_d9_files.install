@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Install, schema and update hooks for the legacy D9 files fixture.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function legacy_d9_files_schema() {
+  $schema['legacy_d9_files_log'] = [
+    'description' => 'Files saved by the legacy D9 controller.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'uri' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}
+
+/**
+ * Records that the log table was reviewed.
+ */
+function legacy_d9_files_update_9001() {
+  \Drupal::state()->set('legacy_d9_files.schema_reviewed', TRUE);
+}

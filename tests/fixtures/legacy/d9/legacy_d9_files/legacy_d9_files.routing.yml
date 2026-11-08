@@ -1,0 +1,33 @@
+legacy_d9_files.save:
+  path: '/legacy-d9/files/save/{name}'
+  defaults:
+    _controller: '\Drupal\legacy_d9_files\Controller\FilesController::save'
+    _title: 'Save'
+  requirements:
+    _access: 'TRUE'
+    name: '[^/]+'
+
+legacy_d9_files.munge:
+  path: '/legacy-d9/files/munge/{name}'
+  defaults:
+    _controller: '\Drupal\legacy_d9_files\Controller\FilesController::munge'
+    _title: 'Munge'
+  requirements:
+    _access: 'TRUE'
+    name: '[^/]+'
+
+legacy_d9_files.schema:
+  path: '/legacy-d9/files/schema'
+  defaults:
+    _controller: '\Drupal\legacy_d9_files\Controller\FilesController::schema'
+    _title: 'Schema'
+  requirements:
+    _access: 'TRUE'
+
+legacy_d9_files.version:
+  path: '/legacy-d9/files/version'
+  defaults:
+    _controller: '\Drupal\legacy_d9_files\Controller\FilesController::version'
+    _title: 'Version'
+  requirements:
+    _access: 'TRUE'

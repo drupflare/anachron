@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Hooks for the legacy D8 basic module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function legacy_d8_basic_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name == 'help.page.legacy_d8_basic') {
+    return '<p>' . t('Legacy D8 basic module.') . '</p>';
+  }
+}

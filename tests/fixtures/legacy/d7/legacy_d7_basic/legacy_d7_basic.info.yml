@@ -1,0 +1,5 @@
+name: Legacy D7 basic
+type: module
+description: A Drupal 7 module, converted only as far as the info file format.
+package: Legacy
+core_version_requirement: ^7

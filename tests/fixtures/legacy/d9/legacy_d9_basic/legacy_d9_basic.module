@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * A Drupal 9 module as it was written: hook_help, hook_theme and hook_cron.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function legacy_d9_basic_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name == 'help.page.legacy_d9_basic') {
+    return '<p>' . t('Legacy D9 basic test module.') . '</p>';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function legacy_d9_basic_theme() {
+  return [
+    'legacy_d9_basic_list' => [
+      'variables' => ['items' => []],
+      'function' => 'legacy_d9_basic_list',
+    ],
+  ];
+}
+
+/**
+ * Theme function for legacy_d9_basic_list.
+ */
+function legacy_d9_basic_list($variables) {
+  $output = '<ul class="legacy-d9-basic-report">';
+  foreach ($variables['items'] as $item) {
+    $output .= '<li>' . Html::escape($item) . '</li>';
+  }
+  return $output . '</ul>';
+}
+
+/**
+ * Implements hook_cron().
+ */
+function legacy_d9_basic_cron() {
+  debug(['cron' => 'legacy d9 basic'], 'legacy_d9_basic');
+}

@@ -1,0 +1,56 @@
+legacy_d9_basic.path:
+  path: '/legacy-d9/path'
+  defaults:
+    _controller: '\Drupal\legacy_d9_basic\Controller\ReportController::path'
+    _title: 'Path'
+  requirements:
+    _access: 'TRUE'
+
+legacy_d9_basic.size:
+  path: '/legacy-d9/size/{bytes}'
+  defaults:
+    _controller: '\Drupal\legacy_d9_basic\Controller\ReportController::size'
+    _title: 'Size'
+  requirements:
+    _access: 'TRUE'
+    bytes: '\d+'
+
+legacy_d9_basic.render:
+  path: '/legacy-d9/render'
+  defaults:
+    _controller: '\Drupal\legacy_d9_basic\Controller\ReportController::render'
+    _title: 'Render'
+  requirements:
+    _access: 'TRUE'
+
+legacy_d9_basic.theme:
+  path: '/legacy-d9/theme'
+  defaults:
+    _controller: '\Drupal\legacy_d9_basic\Controller\ReportController::theme'
+    _title: 'Theme'
+  requirements:
+    _access: 'TRUE'
+
+legacy_d9_basic.password:
+  path: '/legacy-d9/password'
+  defaults:
+    _controller: '\Drupal\legacy_d9_basic\Controller\ReportController::password'
+    _title: 'Password'
+  requirements:
+    _access: 'TRUE'
+
+legacy_d9_basic.roles:
+  path: '/legacy-d9/roles'
+  defaults:
+    _controller: '\Drupal\legacy_d9_basic\Controller\ReportController::roles'
+    _title: 'Roles'
+  requirements:
+    _access: 'TRUE'
+
+legacy_d9_basic.settings:
+  path: '/legacy-d9/settings'
+  defaults:
+    _form: '\Drupal\legacy_d9_basic\Form\SettingsForm'
+    _title: 'Settings'
+  requirements:
+    _access: 'TRUE'

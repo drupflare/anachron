@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Hooks for the Legacy D10 API module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function legacy_d10_api_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name === 'help.page.legacy_d10_api') {
+    return '<p>' . t('Calls helpers from the Drupal 10 API.') . '</p>';
+  }
+}

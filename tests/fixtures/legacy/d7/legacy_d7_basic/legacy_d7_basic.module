@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * A Drupal 7 module as it was written: array() syntax, hook_menu, variable_get.
+ */
+
+/**
+ * Implements hook_permission().
+ */
+function legacy_d7_basic_permission() {
+  return array(
+    'administer legacy d7' => array(
+      'title' => t('Administer legacy D7'),
+      'description' => t('Perform administration tasks for legacy D7.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function legacy_d7_basic_menu() {
+  $items = array();
+  $items['legacy-d7/hello'] = array(
+    'title' => 'Hello',
+    'page callback' => 'legacy_d7_basic_hello',
+    'access arguments' => array('administer legacy d7'),
+    'type' => MENU_CALLBACK,
+  );
+  $items['legacy-d7/open'] = array(
+    'title' => 'Open',
+    'page callback' => 'legacy_d7_basic_open',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Page callback: counts a visit and greets.
+ */
+function legacy_d7_basic_hello() {
+  $visits = variable_get('legacy_d7_basic_visits', 0) + 1;
+  variable_set('legacy_d7_basic_visits', $visits);
+  return array(
+    '#markup' => t('Hello from @version, visit @count', array('@version' => 'D7', '@count' => $visits)),
+  );
+}
+
+/**
+ * Page callback with no access check.
+ */
+function legacy_d7_basic_open() {
+  return 'open page';
+}

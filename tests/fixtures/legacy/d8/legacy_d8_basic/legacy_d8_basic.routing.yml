@@ -1,0 +1,7 @@
+legacy_d8_basic.greet:
+  path: '/legacy-d8/greet'
+  defaults:
+    _controller: '\Drupal\legacy_d8_basic\Controller\GreetController::greet'
+    _title: 'Greet'
+  requirements:
+    _permission: 'administer legacy d8'

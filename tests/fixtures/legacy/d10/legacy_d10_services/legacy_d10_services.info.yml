@@ -1,0 +1,7 @@
+name: Legacy D10 services
+type: module
+description: A Drupal 10 module with a service, a Block plugin, a form and a schema.
+package: Legacy
+core_version_requirement: ^10
+dependencies:
+  - block
