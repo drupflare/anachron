@@ -9,6 +9,7 @@ What `drupflare/anachron` does, what the old code it targets looks like, and wha
 - [Method](#method)
 - [Break Catalog](#break-catalog)
 - [Polyfill Reach](#polyfill-reach)
+- [Port to Drupal 11](#port-to-drupal-11)
 - [PHP Compatibility](#php-compatibility)
 - [Transform Cost](#transform-cost)
 - [Security Properties](#security-properties)
@@ -26,7 +27,7 @@ Four findings shaped the design.
 3. PHP removal is a separate, CMS-neutral problem. Drupal 7 core calls no removed function. A sample of 80 long-unmaintained WordPress plugins shows 6 of 80 with a hard PHP 8 break, from removed functions or removed syntax.
 4. A parse-and-print transform costs about 3.5 to 3.9 ms per KB inside the interpreter, 1.27 times its native cost. That makes a source rewrite affordable once per revision and expensive on every cold boot.
 
-The package currently ships four removed-function polyfills. The Drupal layer is built from a copy of Retrofit (MIT) and is not published yet.
+The package ships four removed-function polyfills and a token-level syntax rewriter. The Drupal layer is a copy of Retrofit (MIT) ported to Drupal 11.4 and 12, with 35 more functions and two opt-in switches. Its classes load against both cores, and a test suite runs fixture modules from Drupal 7 through 10 on Drupal 11. The [Port to Drupal 11](#port-to-drupal-11) section gives the counts and what is still open.
 
 ## Source Trees
 
@@ -135,9 +136,29 @@ Call-weighted reach was measured on 43 well-known Drupal 7 contrib modules at th
 
 Adding the 155 most-called uncovered functions would bring by-name coverage excluding `t()` to 72.9 + 3.7 + 0.8 × 23.4 = 95.3% (arithmetic). The most-called uncovered functions are `entity_get_info` (278), `drupal_get_destination` (116), `format_plural` (95), `format_date` (91), `drupal_strtolower` (79) and `arg` (78).
 
-Retrofit doesn't adapt `form_alter`, `hook_menu_alter`, actions, tasks, `field_attach_*` or the `$node->field_x[LANG][delta]` array shape. Reading its code against 11.4.11 turned up six defects, none run: `module_implements()` calls a method core no longer has, `render()` and one preprocess function call functions deprecated for removal in 13, `node_load()` with no arguments loads every node, `user_role_load_by_name()` looks up by machine id, and `taxonomy_get_tree()` fails on default arguments. Its tests run on PHP 8.1 and have no Drupal 11 job. Support for Drupal 11 is an open issue and an unmerged pull request from April 2025.
+Retrofit doesn't adapt `form_alter`, `hook_menu_alter`, actions, tasks, `field_attach_*` or the `$node->field_x[LANG][delta]` array shape. Reading its code against 11.4.11 turned up six defects: `module_implements()` calls a method core no longer has, `render()` and one preprocess function call functions deprecated for removal in 13, `node_load()` with no arguments loads every node, `user_role_load_by_name()` looks up by machine id, and `taxonomy_get_tree()` fails on default arguments. [Port to Drupal 11](#port-to-drupal-11) records what running the code found. Its tests run on PHP 8.1 and have no Drupal 11 job. Support for Drupal 11 is an open issue and an unmerged pull request from April 2025.
 
 What function polyfills can't do: add a method to a core class that still exists, change an extended class's constructor, or reshape field arrays. In the 60-item samples, 4 of 60 (Drupal 8), 5 of 60 (Drupal 9) and 1 of 60 (Drupal 10) items need a source rewrite.
+
+## Port to Drupal 11
+
+Retrofit at commit `fe72017c` was copied into `src/Drupal` and run against Drupal 11.4.11 and 12.0.0-beta2. Every count below is `local source` unless it says otherwise.
+
+**Class loading.** `tests/load-classes.php` loads each class in its own process, with core's module PSR-4 roots registered. The first run on 11.4.11 found three failures that `php -l` had passed: `Entity\Role::__get(string $name)` narrowed a core parameter, `User\GlobalUser` lacked `AccountInterface::hasRole()`, and `drupal_render_children()` declared an implicit nullable parameter. Drupal 12.0.0-beta2 added two more: `FileSystemInterface::EXISTS_*` no longer exists, so the constants now hold the Drupal 7 integers 0, 1 and 2, and four event subscribers needed `getSubscribedEvents(): array` for Symfony 8. After the fixes the gate reports 58 passed and 0 failed on each core.
+
+**Hooks.** `module_implements()` called `ModuleHandler::getImplementationInfo()`, which core removed. Core 11.4 builds its hook lists when the container compiles, so a `ModuleHandler` built by hand finds no procedural hook. The replacement collects implementations through `invokeAllWith()`, which exists in 11.4.11 and 12.0.0-beta2.
+
+**Kernel tests.** On 11.4.11 before any fix, 59 inherited tests gave 4 errors (the removed PHPUnit `getName()`), 1 failure (a theme fixture declaring `core_version_requirement: ^10`) and 4 warnings (`Theme/Registry.php` read a missing `path` key). The suites now hold 119 unit tests, 90 integration tests and 54 legacy tests. All pass. One integration test failed until the theme was registered with the kernel: the theme negotiator checks the `container.themes` parameter, which is fixed when the container builds, so a theme enabled through config afterwards is refused and core falls back to its own templates. `DrupalKernel::updateThemes()` registers it.
+
+On 12.0.0-beta2 with PHPUnit 12.5.43, run from a scratch copy, 209 unit and integration tests gave 872 assertions, 4 errors, 1 failure and 1 warning. Drupal 12 changes the harness first: it needs PHPUnit 12 (`drupal/core` 12 requires `sebastian/diff ^7`), `#[RunTestsInSeparateProcesses]` on every kernel test class, and a typed `$strictConfigSchema`. The `drupal/core` package for 12 ships without `core/tests`, so the scratch copy loaded the test base classes from the full tree. The 4 errors were one missing `installEntitySchema('entity_test')` in `FieldTypeTest`, which is fixed. The failure is `HookThemeTest::testThemingExampleTextForm`: the PHPTemplate renders, and `$text_form` is undefined inside `theming-example-text-form.tpl.php:29`, so the form never prints. That is the one behaviour difference from 11.4 found so far, and it is not explained.
+
+**Defects fixed.** The other defects above are fixed with tests: `node_load()`, `user_role_load_by_name()`, `taxonomy_get_tree()`, `render()` and the theme settings read. Wrapping every field item in the Drupal 7 array-access decorator broke core validation, because the wrapper hides `OptionsProviderInterface` and `PrimitiveInterface`. The decorator is now opt-in, and options items get a wrapper that passes the interface through.
+
+**Version check.** Core sets `core_incompatible` at `InfoParserDynamic.php:62`. `ExtensionDiscovery` builds `new InfoParser($root)` at `ExtensionDiscovery.php:128`, before any container exists, so a service decorator cannot reach it. With `anachron_ignore_core_requirement` on, the package aliases `Drupal\Core\Extension\InfoParser` to its own parser before core loads the original. That is why the switch cannot come from `settings.php`.
+
+**Legacy suite.** `tests/Legacy` runs fixture modules written for Drupal 7, 8, 9 and 10 on 11.4.11: 54 tests, 158 assertions, 5 skipped. The fixtures were written for this repository, so the suite shows that a pattern works, not how often old sites use it. Each skip names an API with no replacement in core: `\Drupal::entityManager()`, `Drupal\media\Form\EditorMediaDialog`, `theme_get_registry()`, `system_time_zones()`, `PhpassHashedPassword`, and the `function` key of `hook_theme`.
+
+**Removed APIs in custom code.** A scan of the custom code in six repositories (`sample`, n=6, 2,146 PHP files, code outside `vendor`, `node_modules`, core and any `contrib` path) found 12 files that reference a function or class Drupal removed before 11.4.11: 0.56% of files, with 14 function calls and 6 class uses. The tokenizer counter matched a known-answer fixture on 14 of 14 calls. Contrib and vendor code are excluded and make up most of what a project runs. Signature changes and deprecated-but-present APIs are invisible to a count of removed names. The result shows that custom code is rare in the removed-API tail. It does not decide whether an ingest-time rewrite is worth building.
 
 ## PHP Compatibility
 
@@ -201,9 +222,11 @@ All `local source`, Drupal 7.103 and 11.4.11.
 
 - No institution-level share of sites on Drupal 7, on unsupported WordPress, or on Joomla 3 was measured.
 - The Drupal 7 call counts come from contrib modules, not custom code. The WordPress set is a popularity-page draw and its percentages depend on stratum.
-- Retrofit's behavior beyond reading its code and a clean lint is not measured. Its classes haven't been loaded against Drupal 11.4 or 12 here.
+- Retrofit's behavior is measured on fixture modules written for this repository and on class loading. No deployed site has run it, and the Drupal 12 kernel run above is local and not part of CI.
+- `phpcs` skips the imported Drupal layer and the fixture modules, and `phpstan` carries a baseline of 23 errors in the imported code. Files written for this repository are checked in full.
 - Transform cost has no deployed `cpuTime`, no reading for a single file near the memory limit, and no memory figure from inside the interpreter.
 - The hook-outcome split rests on 44 hooks across 23 strata.
 - Drupal 12 figures are beta2. The release candidate and final may differ.
+- The removed-API count covers six repositories and excludes contrib code.
 - Drupal 7 hooks, functions and classes counted as absent are absent by name. A renamed or replaced hook counts as absent.
 - Joomla's manifest fields beyond `targetplatform` and `php_minimum`, and WordPress and Joomla behavior beyond the counts above, are not covered.
