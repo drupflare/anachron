@@ -27,7 +27,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.4'
-          extensions: json, mbstring, tokenizer
+          extensions: json, mbstring, dom, xml, pdo_sqlite, gd, curl, tokenizer
           coverage: pcov
           ini-values: pcov.directory=${{ github.workspace }}/src
       - name: Cache Composer Downloads

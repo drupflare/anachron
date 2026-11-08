@@ -71,7 +71,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          extensions: json, mbstring, tokenizer
+          extensions: json, mbstring, dom, xml, pdo_sqlite, gd, curl, tokenizer
           coverage: none
       - name: Cache Composer Downloads
         uses: actions/cache@v6
@@ -82,7 +82,40 @@ jobs:
       - name: Install Composer Dependencies
         run: composer install --no-interaction --no-progress
       - name: Run PHPUnit
-        run: ./vendor/bin/phpunit
+        run: ./vendor/bin/phpunit --testsuite unit,integration
+
+  legacy:
+    name: Legacy Code on Drupal 11 (PHP ${{ matrix.php }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: lint
+
+    permissions:
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.3', '8.4', '8.5']
+
+    steps:
+      - uses: actions/checkout@v7
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: json, mbstring, dom, xml, pdo_sqlite, gd, curl, tokenizer
+          coverage: none
+      - name: Cache Composer Downloads
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/composer
+          key: composer-${{ matrix.php }}-${{ hashFiles('composer.json') }}
+          restore-keys: composer-${{ matrix.php }}-
+      - name: Install Composer Dependencies
+        run: composer install --no-interaction --no-progress
+      - name: Run Drupal 7, 8, 9 and 10 Fixtures
+        run: ./vendor/bin/phpunit --testsuite legacy --display-skipped
 
   scripts:
     name: Tooling Tests
