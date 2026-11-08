@@ -8,6 +8,64 @@
 	<arg value="sp" />
 	<arg name="colors" />
 
+	<!--
+		The fixture modules are deliberately written the way Drupal 7 through 10 code was written
+		(long arrays, no docblocks, hook_menu callbacks), so linting them would only report that
+		they are old.
+	-->
+	<exclude-pattern>tests/fixtures/*</exclude-pattern>
+
+	<!--
+		The Drupal layer under src/Drupal is a copy of Retrofit. Its style is Matt Glaman's, and
+		reformatting 600 violations across files that stay close to upstream makes every later
+		diff against it unreadable. Files written for this repository stay checked: src/Php,
+		Switches.php, Extension/, legacy-classes.php and the ranked and legacy-removed function
+		files.
+	-->
+	<exclude-pattern>src/Drupal/Access/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/Asset/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/Controller/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/DependencyInjection/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/Entity/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/EventSubscriber/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/Extension/ExtensionWrapper.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/Field/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/Form/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/Language/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/Menu/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/ParamConverter/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/Path/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/Plugin/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/Render/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/Routing/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/Template/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/Theme/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/User/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/constants/*</exclude-pattern>
+	<exclude-pattern>src/Drupal/DB.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/Provider.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/bootstrap.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/constants.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/bootstrap.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/cache.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/common.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/db.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/field.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/file.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/form.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/lock.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/messages.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/module.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/namespaced.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/node.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/path.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/system.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/taxonomy.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/theme.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/user.php</exclude-pattern>
+	<exclude-pattern>src/Drupal/functions/variable.php</exclude-pattern>
+
 	<rule ref="Drupal">
 		<!--
 			The house rule is: import with `use`, then refer to the short name, everywhere, and
@@ -82,6 +140,33 @@
 
 	<rule ref="Drupal.Commenting.FunctionComment.Missing">
 		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Drupal.Commenting.DocComment.MissingShort">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Drupal.Commenting.DocComment.ShortSingleLine">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Drupal.Commenting.FunctionComment.MissingReturnComment">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Drupal.Commenting.FunctionComment.MissingParamComment">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Drupal.Commenting.FunctionComment.ParamMissingDefinition">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Drupal.NamingConventions.ValidFunctionName.ScopeNotCamelCaps">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="DrupalPractice.Variables.GetRequestData">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="DrupalPractice.Objects.StrictSchemaDisabled">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Classes.ClassFileName.NoMatch">
+		<exclude-pattern>src/Drupal/legacy-classes.php</exclude-pattern>
 	</rule>
 	<rule ref="Drupal.Commenting.ClassComment.Missing">
 		<exclude-pattern>tests/*</exclude-pattern>

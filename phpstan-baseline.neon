@@ -1,0 +1,103 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Parameter &\$definitions by\-ref type of method Drupflare\\Anachron\\Drupal\\Entity\\EntityTypeManager\:\:alterDefinitions\(\) expects array\<Drupal\\Core\\Entity\\EntityTypeInterface\>, array given\.$#'
+			identifier: parameterByRef.type
+			count: 1
+			path: src/Drupal/Entity/EntityTypeManager.php
+
+		-
+			message: '#^Property Drupal\\Component\\Plugin\\PluginManagerBase\:\:\$discovery \(Drupal\\Component\\Plugin\\Discovery\\DiscoveryInterface\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 1
+			path: src/Drupal/Menu/LocalActionManager.php
+
+		-
+			message: '#^Property Drupal\\Component\\Plugin\\PluginManagerBase\:\:\$discovery \(Drupal\\Component\\Plugin\\Discovery\\DiscoveryInterface\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 1
+			path: src/Drupal/Menu/LocalTaskManager.php
+
+		-
+			message: '#^Property Drupal\\Core\\Menu\\MenuLinkManager\:\:\$discovery \(Drupal\\Component\\Plugin\\Discovery\\DiscoveryInterface\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 1
+			path: src/Drupal/Menu/MenuLinkManager.php
+
+		-
+			message: '#^Call to function is_callable\(\) with callable\-string&non\-falsy\-string will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Drupal/ParamConverter/PageArgumentsConverter.php
+
+		-
+			message: '#^WeakMap\<Symfony\\Component\\HttpFoundation\\Request, string\> does not accept array\<string, string\>\.$#'
+			identifier: offsetAssign.valueType
+			count: 1
+			path: src/Drupal/Path/CurrentPathStack.php
+
+		-
+			message: '#^WeakMap\<Symfony\\Component\\HttpFoundation\\Request, string\> does not accept array\<string, string\>\|string\.$#'
+			identifier: offsetAssign.valueType
+			count: 1
+			path: src/Drupal/Path/CurrentPathStack.php
+
+		-
+			message: '#^Method Drupflare\\Anachron\\Drupal\\Plugin\\Derivative\\LocalTaskDeriver\:\:create\(\) should return static\(Drupflare\\Anachron\\Drupal\\Plugin\\Derivative\\LocalTaskDeriver\) but returns Drupflare\\Anachron\\Drupal\\Plugin\\Derivative\\LocalTaskDeriver\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Drupal/Plugin/Derivative/LocalTaskDeriver.php
+
+		-
+			message: '#^Method Drupflare\\Anachron\\Drupal\\Plugin\\Field\\FieldType\\DecoratedFieldItem\:\:defaultFieldSettings\(\) should return array but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: src/Drupal/Plugin/Field/FieldType/DecoratedFieldItem.php
+
+		-
+			message: '#^Method Drupflare\\Anachron\\Drupal\\Plugin\\Field\\FieldType\\DecoratedFieldItem\:\:defaultStorageSettings\(\) should return array but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: src/Drupal/Plugin/Field/FieldType/DecoratedFieldItem.php
+
+		-
+			message: '#^Method Drupflare\\Anachron\\Drupal\\Plugin\\Field\\FieldType\\DecoratedFieldItem\:\:generateSampleValue\(\) should return array but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: src/Drupal/Plugin/Field/FieldType/DecoratedFieldItem.php
+
+		-
+			message: '#^Empty array passed to foreach\.$#'
+			identifier: foreach.emptyArray
+			count: 1
+			path: src/Drupal/Plugin/Field/FieldType/FieldItemList.php
+
+		-
+			message: '#^Offset mixed on array\{\} on left side of \?\? does not exist\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: src/Drupal/Plugin/Field/FieldType/FieldItemList.php
+
+		-
+			message: '#^Parameter &\$variables by\-ref type of method Drupflare\\Anachron\\Drupal\\Theme\\HookPreprocess\:\:node\(\) expects array\{node\: Drupal\\node\\NodeInterface, teaser\: bool, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\?\: array\<mixed\>, date\?\: Drupal\\Component\\Render\\MarkupInterface, display_submitted\?\: bool, label\?\: array\<mixed\>\}, array\{node\: Drupal\\node\\NodeInterface, teaser\: bool, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\: mixed, date\: Drupal\\Component\\Render\\MarkupInterface, display_submitted\: true, label\?\: array\<mixed\>, \.\.\.\}\|array\{node\: Drupal\\node\\NodeInterface, teaser\: bool, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\: mixed, display_submitted\: true, label\?\: array\<mixed\>, promote\: bool, \.\.\.\} given\.$#'
+			identifier: parameterByRef.type
+			count: 2
+			path: src/Drupal/Theme/HookPreprocess.php
+
+		-
+			message: '#^Parameter &\$variables by\-ref type of method Drupflare\\Anachron\\Drupal\\Theme\\HookPreprocess\:\:node\(\) expects array\{node\: Drupal\\node\\NodeInterface, teaser\: bool, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\?\: array\<mixed\>, date\?\: Drupal\\Component\\Render\\MarkupInterface, display_submitted\?\: bool, label\?\: array\<mixed\>\}, array\{node\: Drupal\\node\\NodeInterface, teaser\: bool, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\?\: array\<mixed\>, date\?\: Drupal\\Component\\Render\\MarkupInterface, display_submitted\?\: false, label\?\: array\<mixed\>, \.\.\.\}\|array\{node\: Drupal\\node\\NodeInterface, teaser\: bool, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\?\: mixed, date\: Drupal\\Component\\Render\\MarkupInterface, display_submitted\: true, label\?\: array\<mixed\>, \.\.\.\}\|array\{node\: Drupal\\node\\NodeInterface, teaser\: bool, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\?\: mixed, display_submitted\: true, label\?\: array\<mixed\>, promote\: bool, \.\.\.\} given\.$#'
+			identifier: parameterByRef.type
+			count: 6
+			path: src/Drupal/Theme/HookPreprocess.php
+
+		-
+			message: '#^Parameter &\$variables by\-ref type of method Drupflare\\Anachron\\Drupal\\Theme\\HookPreprocess\:\:node\(\) expects array\{node\: Drupal\\node\\NodeInterface, teaser\: bool, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\?\: array\<mixed\>, date\?\: Drupal\\Component\\Render\\MarkupInterface, display_submitted\?\: bool, label\?\: array\<mixed\>\}, array\{node\: Drupal\\node\\NodeInterface, teaser\: bool, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\?\: array\<mixed\>, date\?\: Drupal\\Component\\Render\\MarkupInterface, display_submitted\?\: false, label\?\: array\<mixed\>, \.\.\.\}\|array\{node\: Drupal\\node\\NodeInterface, teaser\: bool, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\?\: mixed, date\: Drupal\\Component\\Render\\MarkupInterface, display_submitted\: true, label\?\: array\<mixed\>, \.\.\.\}\|array\{node\: Drupal\\node\\NodeInterface, teaser\: bool, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\?\: mixed, display_submitted\: true, label\?\: array\<mixed\>, promote\: true, \.\.\.\} given\.$#'
+			identifier: parameterByRef.type
+			count: 1
+			path: src/Drupal/Theme/HookPreprocess.php
+
+		-
+			message: '#^Parameter &\$variables by\-ref type of method Drupflare\\Anachron\\Drupal\\Theme\\HookPreprocess\:\:node\(\) expects array\{node\: Drupal\\node\\NodeInterface, teaser\: bool, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\?\: array\<mixed\>, date\?\: Drupal\\Component\\Render\\MarkupInterface, display_submitted\?\: bool, label\?\: array\<mixed\>\}, array\{node\: Drupal\\node\\NodeInterface, teaser\: true, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\?\: array\<mixed\>, date\?\: Drupal\\Component\\Render\\MarkupInterface, display_submitted\?\: false, label\?\: array\<mixed\>, \.\.\.\}\|array\{node\: Drupal\\node\\NodeInterface, teaser\: true, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\?\: mixed, date\: Drupal\\Component\\Render\\MarkupInterface, display_submitted\: true, label\?\: array\<mixed\>, \.\.\.\}\|array\{node\: Drupal\\node\\NodeInterface, teaser\: true, url\: string, author_name\?\: Drupal\\Component\\Render\\MarkupInterface, author_picture\?\: mixed, display_submitted\: true, label\?\: array\<mixed\>, promote\: bool, \.\.\.\} given\.$#'
+			identifier: parameterByRef.type
+			count: 1
+			path: src/Drupal/Theme/HookPreprocess.php
