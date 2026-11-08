@@ -1,0 +1,26 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["config:recommended", "group:allNonMajor"],
+	"dependencyDashboard": false,
+	"packageRules": [
+		{
+			"matchUpdateTypes": ["minor", "patch", "pin"]
+		},
+		{
+			"description": "drupal/core is the supported-range declaration for the package, not a dependency to chase",
+			"matchPackageNames": ["drupal/core"],
+			"enabled": false
+		},
+		{
+			"description": "phpunit major follows what Drupal core pins, so the root drupal/core decides it",
+			"matchPackageNames": ["phpunit/phpunit"],
+			"matchUpdateTypes": ["major"],
+			"enabled": false
+		},
+		{
+			"matchPackageNames": ["typescript"],
+			"matchUpdateTypes": ["major"],
+			"enabled": false
+		}
+	]
+}
