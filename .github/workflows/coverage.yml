@@ -1,0 +1,77 @@
+name: Check Test Coverage
+
+on:
+  push:
+    branches: [master, feat/*, ver/*]
+  pull_request:
+    branches: [master, feat/*, ver/*]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  coverage:
+    name: Unit Coverage
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v7
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: json, mbstring, tokenizer
+          coverage: pcov
+          ini-values: pcov.directory=${{ github.workspace }}/src
+      - name: Cache Composer Downloads
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/composer
+          key: composer-8.4-${{ hashFiles('composer.json') }}
+          restore-keys: composer-8.4-
+      - name: Install Composer Dependencies
+        run: composer install --no-interaction --no-progress
+      - name: Run PHPUnit with Coverage
+        run: php -d opcache.enable_cli=0 ./vendor/bin/phpunit --coverage-clover coverage/anachron.clover.xml --coverage-text=coverage/anachron.coverage.txt
+      - name: Upload Coverage to Codecov
+        if: success() || failure()
+        uses: codecov/codecov-action@v7
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: drupflare/anachron
+          fail_ci_if_error: false
+          report_type: coverage
+          flags: unit
+          files: coverage/anachron.clover.xml
+      - name: Archive Coverage
+        if: success() || failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage
+          path: coverage/
+          retention-days: 30
+      - name: Coverage to Job Summary
+        if: success() || failure()
+        run: |
+          echo "## Unit Coverage" >> $GITHUB_STEP_SUMMARY
+          if [ -f coverage/anachron.coverage.txt ]; then
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            cat coverage/anachron.coverage.txt >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          else
+            echo 'No report was produced; the run refused to measure.' >> $GITHUB_STEP_SUMMARY
+          fi
+      - name: Add Coverage as PR Comment
+        if: github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork && hashFiles('coverage/anachron.coverage.txt') != ''
+        uses: marocchino/sticky-pull-request-comment@v3
+        with:
+          header: unit-coverage
+          recreate: true
+          path: coverage/anachron.coverage.txt
