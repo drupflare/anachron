@@ -16,6 +16,10 @@ drupal-root/
 coverage/
 .phpunit.cache/
 
+# phpDocumentor
+.phpdoc/cache
+api/
+
 # editor and OS
 .idea/
 .DS_Store

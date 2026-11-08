@@ -7,4 +7,6 @@ LICENSE
 NOTICE
 .husky/
 .phpunit.cache/
+.phpdoc/
+api/
 tests/fixtures/

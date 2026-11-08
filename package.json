@@ -7,6 +7,7 @@
 	"scripts": {
 		"prettier": "prettier --write .",
 		"prettier:check": "prettier --check .",
+		"docs": "./vendor/bin/phpdoc -d src -t api --title=\"drupflare/anachron\" --template=\"clean\" && cp .phpdoc/template/favicon.png api/favicon.png && cp .phpdoc/template/favicon.ico api/favicon.ico && bash phpdoc-favicon.sh",
 		"prepare": "husky",
 		"typecheck": "tsc -p tsconfig.json --noEmit",
 		"lint": "php tests/lint.php",
