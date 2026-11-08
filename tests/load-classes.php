@@ -8,8 +8,8 @@
  * or extends a class core removed, is lint-clean and fatals the first time it autoloads.
  * Each class loads in its own process so one fatal does not hide the rest.
  *
- * The first argument, or DRUPAL_ROOT, is the path to a Drupal checkout with vendor/ installed.
- * It is only read.
+ * The first argument, or DRUPAL_ROOT, is the path to a Drupal checkout with vendor/ installed,
+ * with core in the root or in web/. It is only read.
  */
 
 declare(strict_types=1);
@@ -33,7 +33,8 @@ function bootstrap(string $root, string $package): void
 	ini_set('display_errors', '0');
 	$loader = require $root . '/vendor/autoload.php';
 	$loader->addPsr4('Drupflare\\Anachron\\', $package . '/src');
-	foreach (glob($root . '/core/modules/*', GLOB_ONLYDIR) ?: [] as $dir) {
+	$docroot = is_dir($root . '/web/core') ? $root . '/web' : $root;
+	foreach (glob($docroot . '/core/modules/*', GLOB_ONLYDIR) ?: [] as $dir) {
 		$loader->addPsr4('Drupal\\' . basename($dir) . '\\', $dir . '/src');
 	}
 	foreach (['constants', 'functions'] as $file) {
