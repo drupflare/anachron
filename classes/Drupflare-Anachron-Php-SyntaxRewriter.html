@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en" id="top-of-site">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8"/>
+		<title>
+							drupflare/anachron
+					</title>
+		<meta name="author" content=""/>
+		<meta name="description" content=""/>
+		<base href="../">
+
+		<link href="resources/css/bootstrap.min.css" rel="stylesheet" media="all"/>
+		<link href="resources/css/bootstrap-responsive.min.css" rel="stylesheet" media="all"/>
+		<link href="resources/css/style.css" rel="stylesheet" media="all"/>
+		<link href="resources/css/prism.min.css" rel="stylesheet" media="all"/>
+		<link href="resources/font/css/all.min.css" rel="stylesheet" media="all"/>
+		
+<link rel="apple-touch-icon" sizes="72x72" href="resources/images/apple-touch-icon-72x72.png"/>
+		<link rel="icon" type="image/png" href="../favicon.png"/>
+		<link rel="shortcut icon" href="../favicon.ico"/>
+		<link rel="apple-touch-icon" href="../favicon.png"/>
+	</head>
+	<body>
+
+		<nav class="navbar navbar-fixed-top navbar-inverse">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<i class="fa-solid fa-bars"></i>
+					</a>
+					<a class="brand" href="index.html">drupflare/anachron</a>
+
+					<div class="nav-collapse navbar-responsive-collapse collapse">
+						<ul class="nav pull-right">
+															<li class="dropdown" id="api-menu">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-labelledby="api-menu">
+										API Documentation
+										<b class="caret"></b>
+									</a>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="api-menu">
+																					<li><a href="namespaces/drupal.html"><abbr title="\Drupal">Drupal</abbr></a></li>
+																					<li><a href="namespaces/drupflare.html"><abbr title="\Drupflare">Drupflare</abbr></a></li>
+																			</ul>
+								</li>
+																					<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									Reports
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+									<li>
+										<a href="reports/errors.html">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						<i class="fa-solid fa-bug"></i>&#160;Errors
+											<span class="label label-important pull-right">0</span>
+										</a>
+									</li>
+									<li>
+										<a href="reports/markers.html">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						<i class="fa-solid fa-location-dot"></i>&#160;&#160;Markers
+											<span class="label label-warning pull-right">16</span>
+										</a>
+									</li>
+									<li>
+										<a href="reports/deprecated.html">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								<i class="fa-solid fa-file-circle-xmark"></i>&#160;Deprecated
+											<span class="label label-info pull-right">0</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="go_to_top">
+				<a href="#top-of-site" style="color: inherit">Back To Top&#160;&#160;<i class="fa-solid fa-chevron-up"></i></a>
+			</div>
+		</nav>
+
+		<div id="___" class="container-fluid"> 	<section class="row-fluid">
+		<div class="span2 sidebar">
+								<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1660941911"></a>
+								<a href="namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+			</div>
+			<div id="namespace-1660941911" class="accordion-body collapse in">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-186064568"></a>
+								<a href="namespaces/drupal.html" style="margin-left: 30px; padding-left: 0">Drupal</a>
+			</div>
+			<div id="namespace-186064568" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1574584656"></a>
+								<a href="namespaces/drupal-component.html" style="margin-left: 30px; padding-left: 0">Component</a>
+			</div>
+			<div id="namespace-1574584656" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1863651250"></a>
+								<a href="namespaces/drupal-component-utility.html" style="margin-left: 30px; padding-left: 0">Utility</a>
+			</div>
+			<div id="namespace-1863651250" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupal-Component-Utility-SafeMarkup.html"><abbr title="\Drupal\Component\Utility\SafeMarkup">SafeMarkup</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-837117659"></a>
+								<a href="namespaces/drupflare.html" style="margin-left: 30px; padding-left: 0">Drupflare</a>
+			</div>
+			<div id="namespace-837117659" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1777206630"></a>
+								<a href="namespaces/drupflare-anachron.html" style="margin-left: 30px; padding-left: 0">Anachron</a>
+			</div>
+			<div id="namespace-1777206630" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1633535451"></a>
+								<a href="namespaces/drupflare-anachron-drupal.html" style="margin-left: 30px; padding-left: 0">Drupal</a>
+			</div>
+			<div id="namespace-1633535451" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-359361958"></a>
+								<a href="namespaces/drupflare-anachron-drupal-access.html" style="margin-left: 30px; padding-left: 0">Access</a>
+			</div>
+			<div id="namespace-359361958" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Access-CustomControllerAccessCallback.html"><abbr title="\Drupflare\Anachron\Drupal\Access\CustomControllerAccessCallback">CustomControllerAccessCallback</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1707644483"></a>
+								<a href="namespaces/drupflare-anachron-drupal-asset.html" style="margin-left: 30px; padding-left: 0">Asset</a>
+			</div>
+			<div id="namespace-1707644483" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Asset-RetrofitJsCollectionRenderer.html"><abbr title="\Drupflare\Anachron\Drupal\Asset\RetrofitJsCollectionRenderer">RetrofitJsCollectionRenderer</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Asset-RetrofitLibraryDiscovery.html"><abbr title="\Drupflare\Anachron\Drupal\Asset\RetrofitLibraryDiscovery">RetrofitLibraryDiscovery</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-18972457"></a>
+								<a href="namespaces/drupflare-anachron-drupal-controller.html" style="margin-left: 30px; padding-left: 0">Controller</a>
+			</div>
+			<div id="namespace-18972457" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Controller-DrupalGetFormController.html"><abbr title="\Drupflare\Anachron\Drupal\Controller\DrupalGetFormController">DrupalGetFormController</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Controller-PageCallbackController.html"><abbr title="\Drupflare\Anachron\Drupal\Controller\PageCallbackController">PageCallbackController</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Controller-RetrofitTitleResolver.html"><abbr title="\Drupflare\Anachron\Drupal\Controller\RetrofitTitleResolver">RetrofitTitleResolver</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1267379032"></a>
+								<a href="namespaces/drupflare-anachron-drupal-dependencyinjection.html" style="margin-left: 30px; padding-left: 0">DependencyInjection</a>
+			</div>
+			<div id="namespace-1267379032" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-184796256"></a>
+								<a href="namespaces/drupflare-anachron-drupal-dependencyinjection-compiler.html" style="margin-left: 30px; padding-left: 0">Compiler</a>
+			</div>
+			<div id="namespace-184796256" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-DependencyInjection-Compiler-FilesAutoloaderPass.html"><abbr title="\Drupflare\Anachron\Drupal\DependencyInjection\Compiler\FilesAutoloaderPass">FilesAutoloaderPass</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-705040104"></a>
+								<a href="namespaces/drupflare-anachron-drupal-entity.html" style="margin-left: 30px; padding-left: 0">Entity</a>
+			</div>
+			<div id="namespace-705040104" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Entity-EntityTypeManager.html"><abbr title="\Drupflare\Anachron\Drupal\Entity\EntityTypeManager">EntityTypeManager</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Entity-Role.html"><abbr title="\Drupflare\Anachron\Drupal\Entity\Role">Role</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Entity-WrappedConfigEntity.html"><abbr title="\Drupflare\Anachron\Drupal\Entity\WrappedConfigEntity">WrappedConfigEntity</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Entity-WrappedContentEntity.html"><abbr title="\Drupflare\Anachron\Drupal\Entity\WrappedContentEntity">WrappedContentEntity</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-577530131"></a>
+								<a href="namespaces/drupflare-anachron-drupal-eventsubscriber.html" style="margin-left: 30px; padding-left: 0">EventSubscriber</a>
+			</div>
+			<div id="namespace-577530131" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-EventSubscriber-HookExit.html"><abbr title="\Drupflare\Anachron\Drupal\EventSubscriber\HookExit">HookExit</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-EventSubscriber-HookInit.html"><abbr title="\Drupflare\Anachron\Drupal\EventSubscriber\HookInit">HookInit</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-170765949"></a>
+								<a href="namespaces/drupflare-anachron-drupal-extension.html" style="margin-left: 30px; padding-left: 0">Extension</a>
+			</div>
+			<div id="namespace-170765949" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Extension-ExtensionWrapper.html"><abbr title="\Drupflare\Anachron\Drupal\Extension\ExtensionWrapper">ExtensionWrapper</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Extension-LegacyInfoParser.html"><abbr title="\Drupflare\Anachron\Drupal\Extension\LegacyInfoParser">LegacyInfoParser</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1610789434"></a>
+								<a href="namespaces/drupflare-anachron-drupal-field.html" style="margin-left: 30px; padding-left: 0">Field</a>
+			</div>
+			<div id="namespace-1610789434" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Field-FieldTypePluginManager.html"><abbr title="\Drupflare\Anachron\Drupal\Field\FieldTypePluginManager">FieldTypePluginManager</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-111183760"></a>
+								<a href="namespaces/drupflare-anachron-drupal-form.html" style="margin-left: 30px; padding-left: 0">Form</a>
+			</div>
+			<div id="namespace-111183760" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Form-ArrayAccessFormState.html"><abbr title="\Drupflare\Anachron\Drupal\Form\ArrayAccessFormState">ArrayAccessFormState</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Form-DrupalGetForm.html"><abbr title="\Drupflare\Anachron\Drupal\Form\DrupalGetForm">DrupalGetForm</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Form-FormBuilder.html"><abbr title="\Drupflare\Anachron\Drupal\Form\FormBuilder">FormBuilder</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1584114997"></a>
+								<a href="namespaces/drupflare-anachron-drupal-language.html" style="margin-left: 30px; padding-left: 0">Language</a>
+			</div>
+			<div id="namespace-1584114997" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Language-GlobalLanguage.html"><abbr title="\Drupflare\Anachron\Drupal\Language\GlobalLanguage">GlobalLanguage</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Language-GlobalLanguageSetter.html"><abbr title="\Drupflare\Anachron\Drupal\Language\GlobalLanguageSetter">GlobalLanguageSetter</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-748593905"></a>
+								<a href="namespaces/drupflare-anachron-drupal-menu.html" style="margin-left: 30px; padding-left: 0">Menu</a>
+			</div>
+			<div id="namespace-748593905" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Menu-LocalActionManager.html"><abbr title="\Drupflare\Anachron\Drupal\Menu\LocalActionManager">LocalActionManager</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Menu-LocalTaskManager.html"><abbr title="\Drupflare\Anachron\Drupal\Menu\LocalTaskManager">LocalTaskManager</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Menu-MenuLinkManager.html"><abbr title="\Drupflare\Anachron\Drupal\Menu\MenuLinkManager">MenuLinkManager</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-263502562"></a>
+								<a href="namespaces/drupflare-anachron-drupal-paramconverter.html" style="margin-left: 30px; padding-left: 0">ParamConverter</a>
+			</div>
+			<div id="namespace-263502562" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-ParamConverter-PageArgumentsConverter.html"><abbr title="\Drupflare\Anachron\Drupal\ParamConverter\PageArgumentsConverter">PageArgumentsConverter</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-618956457"></a>
+								<a href="namespaces/drupflare-anachron-drupal-path.html" style="margin-left: 30px; padding-left: 0">Path</a>
+			</div>
+			<div id="namespace-618956457" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Path-CurrentPathStack.html"><abbr title="\Drupflare\Anachron\Drupal\Path\CurrentPathStack">CurrentPathStack</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-666936715"></a>
+								<a href="namespaces/drupflare-anachron-drupal-plugin.html" style="margin-left: 30px; padding-left: 0">Plugin</a>
+			</div>
+			<div id="namespace-666936715" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-643749003"></a>
+								<a href="namespaces/drupflare-anachron-drupal-plugin-block.html" style="margin-left: 30px; padding-left: 0">Block</a>
+			</div>
+			<div id="namespace-643749003" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Block-Block.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Block\Block">Block</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-83661406"></a>
+								<a href="namespaces/drupflare-anachron-drupal-plugin-derivative.html" style="margin-left: 30px; padding-left: 0">Derivative</a>
+			</div>
+			<div id="namespace-83661406" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Derivative-BlockDeriver.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Derivative\BlockDeriver">BlockDeriver</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Derivative-FieldFormatterDeriver.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Derivative\FieldFormatterDeriver">FieldFormatterDeriver</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Derivative-FieldItemDeriver.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Derivative\FieldItemDeriver">FieldItemDeriver</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Derivative-LocalActionDeriver.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Derivative\LocalActionDeriver">LocalActionDeriver</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Derivative-LocalTaskDeriver.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Derivative\LocalTaskDeriver">LocalTaskDeriver</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Derivative-MenuLinkDeriver.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Derivative\MenuLinkDeriver">MenuLinkDeriver</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1451869888"></a>
+								<a href="namespaces/drupflare-anachron-drupal-plugin-discovery.html" style="margin-left: 30px; padding-left: 0">Discovery</a>
+			</div>
+			<div id="namespace-1451869888" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Discovery-InfoHookDeriverDiscovery.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Discovery\InfoHookDeriverDiscovery">InfoHookDeriverDiscovery</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-659968347"></a>
+								<a href="namespaces/drupflare-anachron-drupal-plugin-field.html" style="margin-left: 30px; padding-left: 0">Field</a>
+			</div>
+			<div id="namespace-659968347" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2139053752"></a>
+								<a href="namespaces/drupflare-anachron-drupal-plugin-field-fieldformatter.html" style="margin-left: 30px; padding-left: 0">FieldFormatter</a>
+			</div>
+			<div id="namespace-2139053752" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Field-FieldFormatter-FieldFormatter.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Field\FieldFormatter\FieldFormatter">FieldFormatter</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1823383350"></a>
+								<a href="namespaces/drupflare-anachron-drupal-plugin-field-fieldtype.html" style="margin-left: 30px; padding-left: 0">FieldType</a>
+			</div>
+			<div id="namespace-1823383350" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Field-FieldType-DecoratedFieldItem.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Field\FieldType\DecoratedFieldItem">DecoratedFieldItem</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Field-FieldType-DecoratedOptionsFieldItem.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Field\FieldType\DecoratedOptionsFieldItem">DecoratedOptionsFieldItem</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Field-FieldType-FieldItem.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Field\FieldType\FieldItem">FieldItem</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Field-FieldType-FieldItemList.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Field\FieldType\FieldItemList">FieldItemList</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1551572400"></a>
+								<a href="namespaces/drupflare-anachron-drupal-render.html" style="margin-left: 30px; padding-left: 0">Render</a>
+			</div>
+			<div id="namespace-1551572400" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Render-AttachmentResponseSubscriber.html"><abbr title="\Drupflare\Anachron\Drupal\Render\AttachmentResponseSubscriber">AttachmentResponseSubscriber</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Render-RetrofitHtmlResponseAttachmentsProcessor.html"><abbr title="\Drupflare\Anachron\Drupal\Render\RetrofitHtmlResponseAttachmentsProcessor">RetrofitHtmlResponseAttachmentsProcessor</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-911558951"></a>
+								<a href="namespaces/drupflare-anachron-drupal-routing.html" style="margin-left: 30px; padding-left: 0">Routing</a>
+			</div>
+			<div id="namespace-911558951" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Routing-HookAdminPaths.html"><abbr title="\Drupflare\Anachron\Drupal\Routing\HookAdminPaths">HookAdminPaths</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Routing-HookMenuRegistry.html"><abbr title="\Drupflare\Anachron\Drupal\Routing\HookMenuRegistry">HookMenuRegistry</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Routing-HookMenuRoutes.html"><abbr title="\Drupflare\Anachron\Drupal\Routing\HookMenuRoutes">HookMenuRoutes</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-137922394"></a>
+								<a href="namespaces/drupflare-anachron-drupal-template.html" style="margin-left: 30px; padding-left: 0">Template</a>
+			</div>
+			<div id="namespace-137922394" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Template-RetrofitExtension.html"><abbr title="\Drupflare\Anachron\Drupal\Template\RetrofitExtension">RetrofitExtension</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-645724146"></a>
+								<a href="namespaces/drupflare-anachron-drupal-theme.html" style="margin-left: 30px; padding-left: 0">Theme</a>
+			</div>
+			<div id="namespace-645724146" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Theme-HookPreprocess.html"><abbr title="\Drupflare\Anachron\Drupal\Theme\HookPreprocess">HookPreprocess</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Theme-Registry.html"><abbr title="\Drupflare\Anachron\Drupal\Theme\Registry">Registry</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-926290826"></a>
+								<a href="namespaces/drupflare-anachron-drupal-user.html" style="margin-left: 30px; padding-left: 0">User</a>
+			</div>
+			<div id="namespace-926290826" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-User-GlobalUser.html"><abbr title="\Drupflare\Anachron\Drupal\User\GlobalUser">GlobalUser</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-User-GlobalUserSetter.html"><abbr title="\Drupflare\Anachron\Drupal\User\GlobalUserSetter">GlobalUserSetter</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-User-HookPermissions.html"><abbr title="\Drupflare\Anachron\Drupal\User\HookPermissions">HookPermissions</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-DB.html"><abbr title="\Drupflare\Anachron\Drupal\DB">DB</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Provider.html"><abbr title="\Drupflare\Anachron\Drupal\Provider">Provider</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Switches.html"><abbr title="\Drupflare\Anachron\Drupal\Switches">Switches</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1399322743"></a>
+								<a href="namespaces/drupflare-anachron-php.html" style="margin-left: 30px; padding-left: 0">Php</a>
+			</div>
+			<div id="namespace-1399322743" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html"><abbr title="\Drupflare\Anachron\Php\SyntaxRewriter">SyntaxRewriter</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		</div>
+	</section>
+	<section class="row-fluid">
+		<div class="span10 offset2">
+			<div class="row-fluid">
+				<div class="span8 content class">
+					<nav>
+												<a href="namespaces/drupflare-anachron-php.html"><abbr title="\Drupflare\Anachron\Php">Php</abbr></a>
+						<i class="fa-solid fa-turn-up"></i>
+											</nav>
+					
+					<h1>
+						<small>\Drupflare\Anachron\Php</small>
+						SyntaxRewriter</h1>
+					<p>
+						<em>Rewrites the curly string offset syntax PHP 8.0 removed ($str{0}) to square brackets.</em>
+					</p>
+					<p>Only the two braces of each offset change, each to a single character, so the output keeps
+the input's line count and every line number in a stack trace.</p>
+
+																																<section id="summary">
+						<h2>Summary</h2>
+						<section class="row-fluid heading">
+							<section class="span4">
+								<a href="#methods">Methods</a>
+							</section>
+							<section class="span4">
+								<a href="#properties">Properties</a>
+							</section>
+							<section class="span4">
+								<a href="#constants">Constants</a>
+							</section>
+						</section>
+						<section class="row-fluid public">
+							<section class="span4">
+																																																																																																																																																																											
+																											<a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html#method_rewrite" class="">rewrite</a><br/>
+																								</section>
+							<section class="span4">
+																
+																	<em>No public properties found</em>
+															</section>
+							<section class="span4">
+																
+																	<em>No public constants found</em>
+															</section>
+						</section>
+						<section class="row-fluid protected">
+							<section class="span4">
+																																																																																																																																																								
+																	<em>No protected methods found</em>
+															</section>
+							<section class="span4">
+																
+																	<em>No protected properties found</em>
+															</section>
+							<section class="span4">
+																
+																	<em>No protected constants found</em>
+															</section>
+						</section>
+						<section class="row-fluid private">
+							<section class="span4">
+																																																																																																																																																																																																																																																																																													
+																											<a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html#method_startsOffset" class="">startsOffset</a><br/>
+																			<a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html#method_isOffsetHead" class="">isOffsetHead</a><br/>
+																			<a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html#method_followsArrow" class="">followsArrow</a><br/>
+																			<a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html#method_closingBrace" class="">closingBrace</a><br/>
+																			<a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html#method_opens" class="">opens</a><br/>
+																			<a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html#method_isExpression" class="">isExpression</a><br/>
+																			<a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html#method_previousNonSpace" class="">previousNonSpace</a><br/>
+																								</section>
+							<section class="span4">
+																
+																	<em>No private properties found</em>
+															</section>
+							<section class="span4">
+																
+																	<em>No private constants found</em>
+															</section>
+						</section>
+					</section>
+				</div>
+				<aside class="span4 detailsbar">
+																<span class="label label-info">final</span>
+					
+					
+					<dl>
+						<dt>File</dt>
+						<dd>
+							<a href="files/src-php-syntaxrewriter.html">
+								<div class="path-wrapper">src/Php/SyntaxRewriter.php</div>
+							</a>
+						</dd>
+													<dt>Package</dt>
+							<dd>
+								<div class="namespace-wrapper">Application</div>
+							</dd>
+												<dt>Class hierarchy</dt>
+						<dd class="hierarchy">
+																																				<div class="namespace-wrapper">\Drupflare\Anachron\Php\SyntaxRewriter</div>
+						</dd>
+
+						
+						
+												
+																																																																																																																																																																																															
+																	</dl>
+					<h2>Tags</h2>
+					<table class="table table-condensed">
+																											<tr>
+									<th>
+										package
+									</th>
+									<td>
+																																<p>Application</p>
+
+																			</td>
+								</tr>
+															<tr>
+									<th>
+										uses
+									</th>
+									<td>
+																			</td>
+								</tr>
+															<tr>
+									<th>
+										method
+									</th>
+									<td>
+																			</td>
+								</tr>
+															<tr>
+									<th>
+										property
+									</th>
+									<td>
+																			</td>
+								</tr>
+															<tr>
+									<th>
+										property-read
+									</th>
+									<td>
+																			</td>
+								</tr>
+															<tr>
+									<th>
+										property-write
+									</th>
+									<td>
+																			</td>
+								</tr>
+																		</table>
+				</aside>
+			</div>
+
+						
+						
+										<a id="methods" name="methods"></a>
+				<div class="row-fluid">
+					<div class="span8 content class">
+						<h2>Methods</h2>
+					</div>
+					<aside class="span4 detailsbar"></aside>
+				</div>
+
+															    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_rewrite" name="method_rewrite" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">rewrite()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="fa-solid fa-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">rewrite(string  <span class="argument">$code</span>) : string</pre>
+                <p><em>Rewrites every curly offset in a PHP source string.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$code </td>
+                                <td><p>PHP source.</p>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The source with curly offsets rewritten, or the same string when there are none.</p>
+
+                                                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="fas fa-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html"><div class="path-wrapper">\Drupflare\Anachron\Php\SyntaxRewriter</div></a></dd>
+                                                                                                
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+																																																																																																																																																																												    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_startsOffset" name="method_startsOffset" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">startsOffset()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="fa-solid fa-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">startsOffset(array<int,string|array{int, string, int}>  <span class="argument">$tokens</span>, int  <span class="argument">$open</span>, array<int,string>  <span class="argument">$replace</span>) : bool</pre>
+                <p><em>Checks whether the brace at an index directly follows something that can take an offset.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array<int,string|array{int, string, int}></td>
+                                <td>$tokens </td>
+                                <td><p>The token list.</p>
+</td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$open </td>
+                                <td><p>Index of the brace.</p>
+</td>
+                            </tr>
+                                                    <tr>
+                                <td>array<int,string></td>
+                                <td>$replace </td>
+                                <td><p>Replacements decided so far, which make a closing brace count as a bracket.</p>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    bool
+                                            &mdash; <p>True when the brace is an offset opener.</p>
+
+                                                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="fas fa-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html"><div class="path-wrapper">\Drupflare\Anachron\Php\SyntaxRewriter</div></a></dd>
+                                                                                                
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+																				    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isOffsetHead" name="method_isOffsetHead" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">isOffsetHead()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="fa-solid fa-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isOffsetHead(array<int,string|array{int, string, int}>  <span class="argument">$tokens</span>, int  <span class="argument">$index</span>) : bool</pre>
+                <p><em>Checks whether a token can take a curly offset.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array<int,string|array{int, string, int}></td>
+                                <td>$tokens </td>
+                                <td><p>The token list.</p>
+</td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$index </td>
+                                <td><p>Index of the token.</p>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    bool
+                                            &mdash; <p>True for a variable, a bracket, or a property name after an arrow.</p>
+
+                                                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="fas fa-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html"><div class="path-wrapper">\Drupflare\Anachron\Php\SyntaxRewriter</div></a></dd>
+                                                                                                
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+																				    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_followsArrow" name="method_followsArrow" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">followsArrow()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="fa-solid fa-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">followsArrow(array<int,string|array{int, string, int}>  <span class="argument">$tokens</span>, int  <span class="argument">$index</span>) : bool</pre>
+                <p><em>Checks whether the token at an index follows an object or nullsafe arrow.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array<int,string|array{int, string, int}></td>
+                                <td>$tokens </td>
+                                <td><p>The token list.</p>
+</td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$index </td>
+                                <td><p>Index of the token.</p>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    bool
+                                            &mdash; <p>True when the nearest non-space token before it is an arrow.</p>
+
+                                                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="fas fa-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html"><div class="path-wrapper">\Drupflare\Anachron\Php\SyntaxRewriter</div></a></dd>
+                                                                                                
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+																				    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_closingBrace" name="method_closingBrace" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">closingBrace()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="fa-solid fa-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">closingBrace(array<int,string|array{int, string, int}>  <span class="argument">$tokens</span>, int  <span class="argument">$open</span>) : int|null</pre>
+                <p><em>Finds the brace that closes the one at an index.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array<int,string|array{int, string, int}></td>
+                                <td>$tokens </td>
+                                <td><p>The token list.</p>
+</td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$open </td>
+                                <td><p>Index of the opening brace.</p>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    int|null
+                                            &mdash; <p>Index of the matching closing brace, or null when the braces never balance.</p>
+
+                                                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="fas fa-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html"><div class="path-wrapper">\Drupflare\Anachron\Php\SyntaxRewriter</div></a></dd>
+                                                                                                
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+																				    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_opens" name="method_opens" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">opens()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="fa-solid fa-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">opens(string|array{int, string, int}  <span class="argument">$token</span>) : bool</pre>
+                <p><em>Checks whether a token opens a brace level, including string interpolation.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string|array{int, string, int}</td>
+                                <td>$token </td>
+                                <td><p>The token.</p>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    bool
+                                            &mdash; <p>True for a plain brace, a string brace, or a dollar brace.</p>
+
+                                                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="fas fa-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html"><div class="path-wrapper">\Drupflare\Anachron\Php\SyntaxRewriter</div></a></dd>
+                                                                                                
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+																				    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isExpression" name="method_isExpression" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">isExpression()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="fa-solid fa-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isExpression(array<int,string|array{int, string, int}>  <span class="argument">$tokens</span>, int  <span class="argument">$start</span>, int  <span class="argument">$end</span>) : bool</pre>
+                <p><em>Checks whether the tokens between two braces form an offset expression.</em></p>
+                <p>A block brace inside the range (a property hook body, for one) fails the check: a
+semicolon at the top level, or a brace after anything other than a variable, a bracket,
+a closing brace or a property name.</p>
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array<int,string|array{int, string, int}></td>
+                                <td>$tokens </td>
+                                <td><p>The token list.</p>
+</td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$start </td>
+                                <td><p>Index of the first token after the opening brace.</p>
+</td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$end </td>
+                                <td><p>Index of the closing brace.</p>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    bool
+                                            &mdash; <p>True when the range holds at least one non-space token and reads as an expression.</p>
+
+                                                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="fas fa-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html"><div class="path-wrapper">\Drupflare\Anachron\Php\SyntaxRewriter</div></a></dd>
+                                                                                                
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+																				    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_previousNonSpace" name="method_previousNonSpace" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">previousNonSpace()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="fa-solid fa-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">previousNonSpace(array<int,string|array{int, string, int}>  <span class="argument">$tokens</span>, int  <span class="argument">$index</span>) : int</pre>
+                <p><em>Finds the nearest token before an index that is not whitespace.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array<int,string|array{int, string, int}></td>
+                                <td>$tokens </td>
+                                <td><p>The token list.</p>
+</td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$index </td>
+                                <td><p>Index to search before.</p>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    int
+                                            &mdash; <p>The index found, or -1 when only whitespace precedes it.</p>
+
+                                                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="fas fa-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html"><div class="path-wrapper">\Drupflare\Anachron\Php\SyntaxRewriter</div></a></dd>
+                                                                                                
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+														</div>
+	</section>
+
+	<div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="source-view-label">SyntaxRewriter.php</h3>
+		</div>
+		<div class="modal-body">
+			<pre data-src="files/src/Php/SyntaxRewriter.php.txt" class="language-php line-numbers"></pre>
+		</div>
+	</div>
+
+			<footer class="row-fluid">
+				<section class="span10 offset2">
+					<section class="row-fluid">
+						<section class="span10 offset1">
+							<section class="row-fluid footer-sections">
+								<section
+									class="span4">
+																		<h1>
+										<i class="fa-solid fa-code"></i>
+									</h1>
+									<div>
+										<ul>
+																							<li><a href="namespaces/drupal.html"><abbr title="\Drupal">Drupal</abbr></a></li>
+																							<li><a href="namespaces/drupflare.html"><abbr title="\Drupflare">Drupflare</abbr></a></li>
+																					</ul>
+									</div>
+								</section>
+								<section
+									class="span4">
+																		<h1>
+										<i class="fa-solid fa-project-diagram"></i>
+									</h1>
+									<div>
+										<ul>
+											<li><a href="graphs/class.html">Class Hierarchy Diagram</a></li>
+										</ul>
+									</div>
+								</section>
+								<section
+									class="span4">
+																		<h1>
+										<i class="fa-solid fa-thumbtack"></i>
+									</h1>
+									<div>
+										<ul>
+											<li><a href="reports/errors.html">Errors</a></li>
+											<li><a href="reports/markers.html">Markers</a></li>
+										</ul>
+									</div>
+								</section>
+							</section>
+						</section>
+					</section>
+					<section class="row-fluid">
+						<section class="span10 offset1">
+							<hr/>
+							Documentation is powered by
+							<a href="https://www.phpdoc.org/">phpDocumentor
+							</a>
+							and authored
+							                    on
+							November 8th, 2026 at 18:38.
+						</section>
+					</section>
+				</section>
+			</footer>
+		</div>
+		<script src="resources/js/jquery-1.11.0.min.js"></script>
+		<script src="resources/js/ui/1.10.4/jquery-ui.min.js"></script>
+		<script src="resources/js/jquery.smooth-scroll.js"></script>
+		<script src="resources/js/prism.min.js"></script>
+		<script src="resources/js/bootstrap.js"></script>
+		<script src="resources/js/custom.js"></script>
+			</body>
+</html>

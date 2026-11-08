@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en" id="top-of-site">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8"/>
+		<title>
+							drupflare/anachron
+					</title>
+		<meta name="author" content=""/>
+		<meta name="description" content=""/>
+		<base href="../">
+
+		<link href="resources/css/bootstrap.min.css" rel="stylesheet" media="all"/>
+		<link href="resources/css/bootstrap-responsive.min.css" rel="stylesheet" media="all"/>
+		<link href="resources/css/style.css" rel="stylesheet" media="all"/>
+		<link href="resources/css/prism.min.css" rel="stylesheet" media="all"/>
+		<link href="resources/font/css/all.min.css" rel="stylesheet" media="all"/>
+		
+<link rel="apple-touch-icon" sizes="72x72" href="resources/images/apple-touch-icon-72x72.png"/>
+		<link rel="icon" type="image/png" href="../favicon.png"/>
+		<link rel="shortcut icon" href="../favicon.ico"/>
+		<link rel="apple-touch-icon" href="../favicon.png"/>
+	</head>
+	<body>
+
+		<nav class="navbar navbar-fixed-top navbar-inverse">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<i class="fa-solid fa-bars"></i>
+					</a>
+					<a class="brand" href="index.html">drupflare/anachron</a>
+
+					<div class="nav-collapse navbar-responsive-collapse collapse">
+						<ul class="nav pull-right">
+															<li class="dropdown" id="api-menu">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-labelledby="api-menu">
+										API Documentation
+										<b class="caret"></b>
+									</a>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="api-menu">
+																					<li><a href="namespaces/drupal.html"><abbr title="\Drupal">Drupal</abbr></a></li>
+																					<li><a href="namespaces/drupflare.html"><abbr title="\Drupflare">Drupflare</abbr></a></li>
+																			</ul>
+								</li>
+																					<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									Reports
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+									<li>
+										<a href="reports/errors.html">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						<i class="fa-solid fa-bug"></i>&#160;Errors
+											<span class="label label-important pull-right">0</span>
+										</a>
+									</li>
+									<li>
+										<a href="reports/markers.html">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						<i class="fa-solid fa-location-dot"></i>&#160;&#160;Markers
+											<span class="label label-warning pull-right">16</span>
+										</a>
+									</li>
+									<li>
+										<a href="reports/deprecated.html">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								<i class="fa-solid fa-file-circle-xmark"></i>&#160;Deprecated
+											<span class="label label-info pull-right">0</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="go_to_top">
+				<a href="#top-of-site" style="color: inherit">Back To Top&#160;&#160;<i class="fa-solid fa-chevron-up"></i></a>
+			</div>
+		</nav>
+
+		<div id="___" class="container-fluid"> 	<section class="row-fluid">
+		<div class="span2 sidebar">
+								<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1227492832"></a>
+								<a href="namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+			</div>
+			<div id="namespace-1227492832" class="accordion-body collapse in">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-642650190"></a>
+								<a href="namespaces/drupal.html" style="margin-left: 30px; padding-left: 0">Drupal</a>
+			</div>
+			<div id="namespace-642650190" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-582066002"></a>
+								<a href="namespaces/drupal-component.html" style="margin-left: 30px; padding-left: 0">Component</a>
+			</div>
+			<div id="namespace-582066002" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1039866287"></a>
+								<a href="namespaces/drupal-component-utility.html" style="margin-left: 30px; padding-left: 0">Utility</a>
+			</div>
+			<div id="namespace-1039866287" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupal-Component-Utility-SafeMarkup.html"><abbr title="\Drupal\Component\Utility\SafeMarkup">SafeMarkup</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2070540223"></a>
+								<a href="namespaces/drupflare.html" style="margin-left: 30px; padding-left: 0">Drupflare</a>
+			</div>
+			<div id="namespace-2070540223" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1094098906"></a>
+								<a href="namespaces/drupflare-anachron.html" style="margin-left: 30px; padding-left: 0">Anachron</a>
+			</div>
+			<div id="namespace-1094098906" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-155712381"></a>
+								<a href="namespaces/drupflare-anachron-drupal.html" style="margin-left: 30px; padding-left: 0">Drupal</a>
+			</div>
+			<div id="namespace-155712381" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-687962492"></a>
+								<a href="namespaces/drupflare-anachron-drupal-access.html" style="margin-left: 30px; padding-left: 0">Access</a>
+			</div>
+			<div id="namespace-687962492" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Access-CustomControllerAccessCallback.html"><abbr title="\Drupflare\Anachron\Drupal\Access\CustomControllerAccessCallback">CustomControllerAccessCallback</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-26739717"></a>
+								<a href="namespaces/drupflare-anachron-drupal-asset.html" style="margin-left: 30px; padding-left: 0">Asset</a>
+			</div>
+			<div id="namespace-26739717" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Asset-RetrofitJsCollectionRenderer.html"><abbr title="\Drupflare\Anachron\Drupal\Asset\RetrofitJsCollectionRenderer">RetrofitJsCollectionRenderer</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Asset-RetrofitLibraryDiscovery.html"><abbr title="\Drupflare\Anachron\Drupal\Asset\RetrofitLibraryDiscovery">RetrofitLibraryDiscovery</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-930560453"></a>
+								<a href="namespaces/drupflare-anachron-drupal-controller.html" style="margin-left: 30px; padding-left: 0">Controller</a>
+			</div>
+			<div id="namespace-930560453" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Controller-DrupalGetFormController.html"><abbr title="\Drupflare\Anachron\Drupal\Controller\DrupalGetFormController">DrupalGetFormController</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Controller-PageCallbackController.html"><abbr title="\Drupflare\Anachron\Drupal\Controller\PageCallbackController">PageCallbackController</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Controller-RetrofitTitleResolver.html"><abbr title="\Drupflare\Anachron\Drupal\Controller\RetrofitTitleResolver">RetrofitTitleResolver</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1159379344"></a>
+								<a href="namespaces/drupflare-anachron-drupal-dependencyinjection.html" style="margin-left: 30px; padding-left: 0">DependencyInjection</a>
+			</div>
+			<div id="namespace-1159379344" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-886442681"></a>
+								<a href="namespaces/drupflare-anachron-drupal-dependencyinjection-compiler.html" style="margin-left: 30px; padding-left: 0">Compiler</a>
+			</div>
+			<div id="namespace-886442681" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-DependencyInjection-Compiler-FilesAutoloaderPass.html"><abbr title="\Drupflare\Anachron\Drupal\DependencyInjection\Compiler\FilesAutoloaderPass">FilesAutoloaderPass</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1155392526"></a>
+								<a href="namespaces/drupflare-anachron-drupal-entity.html" style="margin-left: 30px; padding-left: 0">Entity</a>
+			</div>
+			<div id="namespace-1155392526" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Entity-EntityTypeManager.html"><abbr title="\Drupflare\Anachron\Drupal\Entity\EntityTypeManager">EntityTypeManager</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Entity-Role.html"><abbr title="\Drupflare\Anachron\Drupal\Entity\Role">Role</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Entity-WrappedConfigEntity.html"><abbr title="\Drupflare\Anachron\Drupal\Entity\WrappedConfigEntity">WrappedConfigEntity</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Entity-WrappedContentEntity.html"><abbr title="\Drupflare\Anachron\Drupal\Entity\WrappedContentEntity">WrappedContentEntity</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-396892157"></a>
+								<a href="namespaces/drupflare-anachron-drupal-eventsubscriber.html" style="margin-left: 30px; padding-left: 0">EventSubscriber</a>
+			</div>
+			<div id="namespace-396892157" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-EventSubscriber-HookExit.html"><abbr title="\Drupflare\Anachron\Drupal\EventSubscriber\HookExit">HookExit</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-EventSubscriber-HookInit.html"><abbr title="\Drupflare\Anachron\Drupal\EventSubscriber\HookInit">HookInit</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1399487852"></a>
+								<a href="namespaces/drupflare-anachron-drupal-extension.html" style="margin-left: 30px; padding-left: 0">Extension</a>
+			</div>
+			<div id="namespace-1399487852" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Extension-ExtensionWrapper.html"><abbr title="\Drupflare\Anachron\Drupal\Extension\ExtensionWrapper">ExtensionWrapper</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Extension-LegacyInfoParser.html"><abbr title="\Drupflare\Anachron\Drupal\Extension\LegacyInfoParser">LegacyInfoParser</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-140957858"></a>
+								<a href="namespaces/drupflare-anachron-drupal-field.html" style="margin-left: 30px; padding-left: 0">Field</a>
+			</div>
+			<div id="namespace-140957858" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Field-FieldTypePluginManager.html"><abbr title="\Drupflare\Anachron\Drupal\Field\FieldTypePluginManager">FieldTypePluginManager</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1552866525"></a>
+								<a href="namespaces/drupflare-anachron-drupal-form.html" style="margin-left: 30px; padding-left: 0">Form</a>
+			</div>
+			<div id="namespace-1552866525" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Form-ArrayAccessFormState.html"><abbr title="\Drupflare\Anachron\Drupal\Form\ArrayAccessFormState">ArrayAccessFormState</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Form-DrupalGetForm.html"><abbr title="\Drupflare\Anachron\Drupal\Form\DrupalGetForm">DrupalGetForm</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Form-FormBuilder.html"><abbr title="\Drupflare\Anachron\Drupal\Form\FormBuilder">FormBuilder</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-290815819"></a>
+								<a href="namespaces/drupflare-anachron-drupal-language.html" style="margin-left: 30px; padding-left: 0">Language</a>
+			</div>
+			<div id="namespace-290815819" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Language-GlobalLanguage.html"><abbr title="\Drupflare\Anachron\Drupal\Language\GlobalLanguage">GlobalLanguage</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Language-GlobalLanguageSetter.html"><abbr title="\Drupflare\Anachron\Drupal\Language\GlobalLanguageSetter">GlobalLanguageSetter</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-673696220"></a>
+								<a href="namespaces/drupflare-anachron-drupal-menu.html" style="margin-left: 30px; padding-left: 0">Menu</a>
+			</div>
+			<div id="namespace-673696220" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Menu-LocalActionManager.html"><abbr title="\Drupflare\Anachron\Drupal\Menu\LocalActionManager">LocalActionManager</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Menu-LocalTaskManager.html"><abbr title="\Drupflare\Anachron\Drupal\Menu\LocalTaskManager">LocalTaskManager</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Menu-MenuLinkManager.html"><abbr title="\Drupflare\Anachron\Drupal\Menu\MenuLinkManager">MenuLinkManager</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1046468947"></a>
+								<a href="namespaces/drupflare-anachron-drupal-paramconverter.html" style="margin-left: 30px; padding-left: 0">ParamConverter</a>
+			</div>
+			<div id="namespace-1046468947" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-ParamConverter-PageArgumentsConverter.html"><abbr title="\Drupflare\Anachron\Drupal\ParamConverter\PageArgumentsConverter">PageArgumentsConverter</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-751315114"></a>
+								<a href="namespaces/drupflare-anachron-drupal-path.html" style="margin-left: 30px; padding-left: 0">Path</a>
+			</div>
+			<div id="namespace-751315114" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Path-CurrentPathStack.html"><abbr title="\Drupflare\Anachron\Drupal\Path\CurrentPathStack">CurrentPathStack</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-708275158"></a>
+								<a href="namespaces/drupflare-anachron-drupal-plugin.html" style="margin-left: 30px; padding-left: 0">Plugin</a>
+			</div>
+			<div id="namespace-708275158" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1701137113"></a>
+								<a href="namespaces/drupflare-anachron-drupal-plugin-block.html" style="margin-left: 30px; padding-left: 0">Block</a>
+			</div>
+			<div id="namespace-1701137113" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Block-Block.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Block\Block">Block</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1752236607"></a>
+								<a href="namespaces/drupflare-anachron-drupal-plugin-derivative.html" style="margin-left: 30px; padding-left: 0">Derivative</a>
+			</div>
+			<div id="namespace-1752236607" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Derivative-BlockDeriver.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Derivative\BlockDeriver">BlockDeriver</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Derivative-FieldFormatterDeriver.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Derivative\FieldFormatterDeriver">FieldFormatterDeriver</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Derivative-FieldItemDeriver.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Derivative\FieldItemDeriver">FieldItemDeriver</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Derivative-LocalActionDeriver.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Derivative\LocalActionDeriver">LocalActionDeriver</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Derivative-LocalTaskDeriver.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Derivative\LocalTaskDeriver">LocalTaskDeriver</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Derivative-MenuLinkDeriver.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Derivative\MenuLinkDeriver">MenuLinkDeriver</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-291949815"></a>
+								<a href="namespaces/drupflare-anachron-drupal-plugin-discovery.html" style="margin-left: 30px; padding-left: 0">Discovery</a>
+			</div>
+			<div id="namespace-291949815" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Discovery-InfoHookDeriverDiscovery.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Discovery\InfoHookDeriverDiscovery">InfoHookDeriverDiscovery</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-466537395"></a>
+								<a href="namespaces/drupflare-anachron-drupal-plugin-field.html" style="margin-left: 30px; padding-left: 0">Field</a>
+			</div>
+			<div id="namespace-466537395" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-229748453"></a>
+								<a href="namespaces/drupflare-anachron-drupal-plugin-field-fieldformatter.html" style="margin-left: 30px; padding-left: 0">FieldFormatter</a>
+			</div>
+			<div id="namespace-229748453" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Field-FieldFormatter-FieldFormatter.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Field\FieldFormatter\FieldFormatter">FieldFormatter</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-133750708"></a>
+								<a href="namespaces/drupflare-anachron-drupal-plugin-field-fieldtype.html" style="margin-left: 30px; padding-left: 0">FieldType</a>
+			</div>
+			<div id="namespace-133750708" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Field-FieldType-DecoratedFieldItem.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Field\FieldType\DecoratedFieldItem">DecoratedFieldItem</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Field-FieldType-DecoratedOptionsFieldItem.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Field\FieldType\DecoratedOptionsFieldItem">DecoratedOptionsFieldItem</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Field-FieldType-FieldItem.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Field\FieldType\FieldItem">FieldItem</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Plugin-Field-FieldType-FieldItemList.html"><abbr title="\Drupflare\Anachron\Drupal\Plugin\Field\FieldType\FieldItemList">FieldItemList</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-63922180"></a>
+								<a href="namespaces/drupflare-anachron-drupal-render.html" style="margin-left: 30px; padding-left: 0">Render</a>
+			</div>
+			<div id="namespace-63922180" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Render-AttachmentResponseSubscriber.html"><abbr title="\Drupflare\Anachron\Drupal\Render\AttachmentResponseSubscriber">AttachmentResponseSubscriber</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Render-RetrofitHtmlResponseAttachmentsProcessor.html"><abbr title="\Drupflare\Anachron\Drupal\Render\RetrofitHtmlResponseAttachmentsProcessor">RetrofitHtmlResponseAttachmentsProcessor</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1381188804"></a>
+								<a href="namespaces/drupflare-anachron-drupal-routing.html" style="margin-left: 30px; padding-left: 0">Routing</a>
+			</div>
+			<div id="namespace-1381188804" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Routing-HookAdminPaths.html"><abbr title="\Drupflare\Anachron\Drupal\Routing\HookAdminPaths">HookAdminPaths</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Routing-HookMenuRegistry.html"><abbr title="\Drupflare\Anachron\Drupal\Routing\HookMenuRegistry">HookMenuRegistry</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Routing-HookMenuRoutes.html"><abbr title="\Drupflare\Anachron\Drupal\Routing\HookMenuRoutes">HookMenuRoutes</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1969042148"></a>
+								<a href="namespaces/drupflare-anachron-drupal-template.html" style="margin-left: 30px; padding-left: 0">Template</a>
+			</div>
+			<div id="namespace-1969042148" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Template-RetrofitExtension.html"><abbr title="\Drupflare\Anachron\Drupal\Template\RetrofitExtension">RetrofitExtension</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2069868749"></a>
+								<a href="namespaces/drupflare-anachron-drupal-theme.html" style="margin-left: 30px; padding-left: 0">Theme</a>
+			</div>
+			<div id="namespace-2069868749" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Theme-HookPreprocess.html"><abbr title="\Drupflare\Anachron\Drupal\Theme\HookPreprocess">HookPreprocess</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Theme-Registry.html"><abbr title="\Drupflare\Anachron\Drupal\Theme\Registry">Registry</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-218104348"></a>
+								<a href="namespaces/drupflare-anachron-drupal-user.html" style="margin-left: 30px; padding-left: 0">User</a>
+			</div>
+			<div id="namespace-218104348" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-User-GlobalUser.html"><abbr title="\Drupflare\Anachron\Drupal\User\GlobalUser">GlobalUser</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-User-GlobalUserSetter.html"><abbr title="\Drupflare\Anachron\Drupal\User\GlobalUserSetter">GlobalUserSetter</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-User-HookPermissions.html"><abbr title="\Drupflare\Anachron\Drupal\User\HookPermissions">HookPermissions</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Drupal-DB.html"><abbr title="\Drupflare\Anachron\Drupal\DB">DB</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Provider.html"><abbr title="\Drupflare\Anachron\Drupal\Provider">Provider</abbr></a></li>
+													<li class="class"><a href="classes/Drupflare-Anachron-Drupal-Switches.html"><abbr title="\Drupflare\Anachron\Drupal\Switches">Switches</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+													<div class="accordion" style="margin-bottom: 0">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-57866815"></a>
+								<a href="namespaces/drupflare-anachron-php.html" style="margin-left: 30px; padding-left: 0">Php</a>
+			</div>
+			<div id="namespace-57866815" class="accordion-body collapse ">
+				<div class="accordion-inner">
+
+					
+					<ul>
+																									<li class="class"><a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html"><abbr title="\Drupflare\Anachron\Php\SyntaxRewriter">SyntaxRewriter</abbr></a></li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+					<ul>
+																							</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		</div>
+	</section>
+	<section class="row-fluid">
+		<div class="span10 offset2">
+			<div class="row-fluid">
+				<div class="span8 content namespace">
+					<nav>
+												<a href="namespaces/drupflare-anachron.html"><abbr title="\Drupflare\Anachron">Anachron</abbr></a>
+											</nav>
+					<h1>
+						<small>\Drupflare\Anachron</small>
+						Php</h1>
+
+					
+					
+					
+											<h2>Classes</h2>
+						<table class="table table-hover">
+															<tr>
+									<td><a href="classes/Drupflare-Anachron-Php-SyntaxRewriter.html"><abbr title="\Drupflare\Anachron\Php\SyntaxRewriter">SyntaxRewriter</abbr></a></td>
+									<td>
+										<em>Rewrites the curly string offset syntax PHP 8.0 removed ($str{0}) to square brackets.</em>
+									</td>
+								</tr>
+													</table>
+									</div>
+
+				<aside class="span4 detailsbar">
+					<dl>
+						<dt>Namespace hierarchy</dt>
+						<dd class="hierarchy">
+																																																																																																																																						
+									<div class="namespace-wrapper"><a href="namespaces/default.html"><abbr title="\"></abbr></a></div>
+															
+									<div class="namespace-wrapper"><a href="namespaces/drupflare.html"><abbr title="\Drupflare">Drupflare</abbr></a></div>
+															
+									<div class="namespace-wrapper"><a href="namespaces/drupflare-anachron.html"><abbr title="\Drupflare\Anachron">Anachron</abbr></a></div>
+																						<div class="namespace-wrapper">\Drupflare\Anachron\Php</div>
+						</dd>
+					</dl>
+				</aside>
+			</div>
+
+			
+			
+		</div>
+	</section>
+
+			<footer class="row-fluid">
+				<section class="span10 offset2">
+					<section class="row-fluid">
+						<section class="span10 offset1">
+							<section class="row-fluid footer-sections">
+								<section
+									class="span4">
+																		<h1>
+										<i class="fa-solid fa-code"></i>
+									</h1>
+									<div>
+										<ul>
+																							<li><a href="namespaces/drupal.html"><abbr title="\Drupal">Drupal</abbr></a></li>
+																							<li><a href="namespaces/drupflare.html"><abbr title="\Drupflare">Drupflare</abbr></a></li>
+																					</ul>
+									</div>
+								</section>
+								<section
+									class="span4">
+																		<h1>
+										<i class="fa-solid fa-project-diagram"></i>
+									</h1>
+									<div>
+										<ul>
+											<li><a href="graphs/class.html">Class Hierarchy Diagram</a></li>
+										</ul>
+									</div>
+								</section>
+								<section
+									class="span4">
+																		<h1>
+										<i class="fa-solid fa-thumbtack"></i>
+									</h1>
+									<div>
+										<ul>
+											<li><a href="reports/errors.html">Errors</a></li>
+											<li><a href="reports/markers.html">Markers</a></li>
+										</ul>
+									</div>
+								</section>
+							</section>
+						</section>
+					</section>
+					<section class="row-fluid">
+						<section class="span10 offset1">
+							<hr/>
+							Documentation is powered by
+							<a href="https://www.phpdoc.org/">phpDocumentor
+							</a>
+							and authored
+							                    on
+							November 8th, 2026 at 18:38.
+						</section>
+					</section>
+				</section>
+			</footer>
+		</div>
+		<script src="resources/js/jquery-1.11.0.min.js"></script>
+		<script src="resources/js/ui/1.10.4/jquery-ui.min.js"></script>
+		<script src="resources/js/jquery.smooth-scroll.js"></script>
+		<script src="resources/js/prism.min.js"></script>
+		<script src="resources/js/bootstrap.js"></script>
+		<script src="resources/js/custom.js"></script>
+			</body>
+</html>
