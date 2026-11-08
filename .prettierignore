@@ -1,0 +1,10 @@
+node_modules/
+vendor/
+drupal-root/
+coverage/
+bun.lock
+LICENSE
+NOTICE
+.husky/
+.phpunit.cache/
+tests/fixtures/
