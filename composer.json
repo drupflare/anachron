@@ -32,16 +32,24 @@
 	},
 	"require-dev": {
 		"drupal/coder": "^9.0",
+		"mglaman/phpstan-drupal": "^2.3",
+		"mikey179/vfsstream": "^1.6",
 		"nikic/php-parser": "^5.9",
+		"phpdocumentor/shim": "^3.10",
+		"phpspec/prophecy-phpunit": "^2.5",
 		"phpstan/phpstan": "^2.2",
-		"phpunit/phpunit": "^11.5"
+		"phpunit/phpunit": "^11.5",
+		"symfony/css-selector": "^7.4"
 	},
 	"autoload": {
 		"psr-4": {
 			"Drupflare\\Anachron\\": "src/"
 		},
 		"files": [
-			"src/Php/polyfills.php"
+			"src/Php/polyfills.php",
+			"src/Drupal/constants.php",
+			"src/Drupal/functions.php",
+			"src/Drupal/bootstrap.php"
 		]
 	},
 	"autoload-dev": {
@@ -60,7 +68,8 @@
 		"allow-plugins": {
 			"dealerdirect/phpcodesniffer-composer-installer": true,
 			"symfony/runtime": false,
-			"drupal/core-composer-scaffold": false
+			"drupal/core-composer-scaffold": false,
+			"phpdocumentor/shim": true
 		}
 	},
 	"scripts": {

@@ -22,7 +22,8 @@ function retrofit(name = 'retrofit-drupal/retrofit'): string {
 		'src/functions.php': '<?php\n',
 		'src/constants.php': '<?php\n',
 		'templates/a.html.twig': 'x',
-		'tests/src/FooTest.php': '<?php\nnamespace Retrofit\\Drupal\\Tests\\Unit;\n',
+		'tests/src/FooTest.php':
+			'<?php\nnamespace Retrofit\\Drupal\\Tests\\Unit;\nuse mglaman\\DrupalTestHelpers\\RequestTrait;\n$p = "../../tests/data/m";\n',
 		'tests/data/m/m.info.yml': 'name: m\n',
 		'docs/README.md': '# docs\n'
 	});
@@ -51,6 +52,15 @@ test('files land in the anachron layout with the namespace rewritten', () => {
 	expect(existsSync(join(to, 'src/templates/a.html.twig'))).toBe(true);
 	expect(existsSync(join(to, 'tests/fixtures/retrofit/m/m.info.yml'))).toBe(true);
 	expect(existsSync(join(to, 'docs/retrofit/README.md'))).toBe(true);
+});
+
+test('test helpers and fixture paths point at this repository', () => {
+	const to = target();
+	importRetrofit(retrofit(), to);
+	const body = readFileSync(join(to, 'tests/Drupal/FooTest.php'), 'utf8');
+	expect(body).toContain('use Drupflare\\Anachron\\Tests\\Drupal\\Utils\\RequestTrait;');
+	expect(body).toContain('../../tests/fixtures/retrofit/m');
+	expect(body).not.toContain('mglaman');
 });
 
 test('no Retrofit namespace is left behind', () => {

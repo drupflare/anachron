@@ -15,7 +15,9 @@ const REWRITES: [RegExp, string][] = [
 	[/Retrofit\\\\Drupal\\\\Tests/g, 'Drupflare\\\\Anachron\\\\Tests\\\\Drupal'],
 	[/Retrofit\\Drupal\\Tests/g, 'Drupflare\\Anachron\\Tests\\Drupal'],
 	[/Retrofit\\\\Drupal/g, 'Drupflare\\\\Anachron\\\\Drupal'],
-	[/Retrofit\\Drupal/g, 'Drupflare\\Anachron\\Drupal']
+	[/Retrofit\\Drupal/g, 'Drupflare\\Anachron\\Drupal'],
+	[/mglaman\\DrupalTestHelpers\\/g, 'Drupflare\\Anachron\\Tests\\Drupal\\Utils\\'],
+	[/tests\/data/g, 'tests/fixtures/retrofit']
 ];
 
 const MAP: [string, string][] = [
@@ -33,7 +35,7 @@ const AUTOLOAD_FILES = [
 	'src/Drupal/bootstrap.php'
 ];
 
-function rewrite(dir: string): number {
+export function rewrite(dir: string): number {
 	let count = 0;
 	for (const name of readdirSync(dir)) {
 		const path = join(dir, name);
