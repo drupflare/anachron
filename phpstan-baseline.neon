@@ -101,3 +101,9 @@ parameters:
 			identifier: parameterByRef.type
 			count: 1
 			path: src/Drupal/Theme/HookPreprocess.php
+
+		-
+			message: '#^Trait Symfony\\Component\\DependencyInjection\\ContainerAwareTrait is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: src/Drupal/legacy-classes.php

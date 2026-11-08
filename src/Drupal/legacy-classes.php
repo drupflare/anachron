@@ -63,6 +63,51 @@ namespace Drupal\Component\Utility {
 	}
 }
 
+namespace Symfony\Component\DependencyInjection {
+	// removed in Symfony 7, so Drupal 11 has neither; group and pathologic still use the trait
+	if (!interface_exists(ContainerAwareInterface::class)) {
+		/**
+		 * The Symfony 5.4 interface for an object that is given the container.
+		 */
+		interface ContainerAwareInterface
+		{
+			/**
+			 * Sets the container.
+			 *
+			 * @param \Symfony\Component\DependencyInjection\ContainerInterface|null $container
+			 *   The container.
+			 */
+			public function setContainer(?ContainerInterface $container = null);
+		}
+	}
+
+	if (!trait_exists(ContainerAwareTrait::class)) {
+		/**
+		 * The Symfony 5.4 trait that holds the container.
+		 */
+		trait ContainerAwareTrait
+		{
+			/**
+			 * The container, untyped as it was before Symfony 6.
+			 *
+			 * @var \Symfony\Component\DependencyInjection\ContainerInterface|null
+			 */
+			protected $container;
+
+			/**
+			 * Sets the container.
+			 *
+			 * @param \Symfony\Component\DependencyInjection\ContainerInterface|null $container
+			 *   The container.
+			 */
+			public function setContainer(?ContainerInterface $container = null)
+			{
+				$this->container = $container;
+			}
+		}
+	}
+}
+
 namespace {
 	use Drupflare\Anachron\Drupal\Extension\LegacyInfoParser;
 
